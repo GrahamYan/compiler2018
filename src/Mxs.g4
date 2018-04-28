@@ -1,17 +1,6 @@
 grammar Mxs;
 
 
-//lexer
-ID : [a-zA-Z_] [a-zA-Z_0-9]*;                           //identifier
-
-STR : '"' ('\\"' | '\\\\'|.)*? '"' ;                    //string
-
-NUM : [1-9] [0-9]* | '0';                               //number
-
-WS : ( ' ' | '\t' | '\n' | '\r' ) + -> skip;            //whitespace
-
-LINE_COMMENT : '//' ~[\r\n]* -> skip;                   //comment
-
 
 //parser
 compilationUnit : (defs)* EOF;
@@ -33,14 +22,14 @@ basetype : ('int' | 'bool' | 'void' | 'string');        //base type
 classname : ID;                                         //class type
 
 defclass : 'class' classname '{'                        //define class
-    (func = ID '(' ;)' block
+    (func = ID '(' ')' block
     | defunc
-    | devars
+    | defvars
     )* '}';
 
 funcname : ID;                                          //function name
 
-defunc : type funcname '(' params '}' block;            //define function
+defunc : type funcname '(' params ')' block;            //define function
 
 params : (param (',' param)*)?;                         //list of parameters
 
@@ -89,3 +78,15 @@ expr : funcname '(' exprs? ')'                          //expression
 news : varname '(' exprs ')'                                //new an object
     | (classname | name = 'int' | name = 'string' | name = 'bool') ('[' expr ']')+ ('[' ']')* ('[' expr ']')?//new an array
     | (classname | name = 'int' | name = 'string' | name = 'bool') ('[' ']')*;
+
+
+//lexer
+ID : [a-zA-Z_] [a-zA-Z_0-9]*;                           //identifier
+
+STR : '"' ('\\"' | '\\\\'|.)*? '"' ;                    //string
+
+NUM : [1-9] [0-9]* | '0';                               //number
+
+WS : ( ' ' | '\t' | '\n' | '\r' ) + -> skip;            //whitespace
+
+LINE_COMMENT : '//' ~[\r\n]* -> skip;                   //comment
