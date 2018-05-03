@@ -27,13 +27,13 @@ public class Main {
     public static void printAST(ProgNode program) throws Exception {
         //FileOutputStream outputStream = new FileOutputStream("Test/TestSemantic/test_result.txt");
         ASTPrinter printer = new ASTPrinter();
-        printer.PrintAST(program, outputStream);
+        //printer.PrintAST(program, outputStream);
     }
 
     public static void main(String[] args) throws Exception {
         //     InputStream is = System.in;
         //InputStream is = new FileInputStream("Test/TestSemantic/text.txt");
-               InputStream is = new FileInputStream("program.txt");
+        InputStream is = new FileInputStream("program.txt");
         ANTLRInputStream input = new ANTLRInputStream(is);
         MxsLexer lexer = new MxsLexer(input);
 //        lexer.addErrorListener(MxsErrorListener.INSTANCE);
@@ -52,3 +52,4 @@ public class Main {
     }
 
 }
+
