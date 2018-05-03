@@ -2,80 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_4_7_intellij_1_8_4_version_complete.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ASTNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/ClassDeclNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/DeclNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/FuncDeclNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/FuncParamNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/VarDeclNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/AndExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ArrayExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/AssignExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BinaryExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BoolConstNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ConditionExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ConstExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CreatorExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ExprListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IdentifierExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IntConstNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NewExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NullConstNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/OrExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/PrefixExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/StringConstNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/SuffixExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ThisExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/UnaryExprNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ProgNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/BlockNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/BreakNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ContinueNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ExprStmtNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ForNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/IfNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ReturnNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/StmtNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/WhileNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/object/BuiltInObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/object/FuncDeclObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/object/FuncObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/object/Object.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/object/ParameterObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/object/VarObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Type/ArrayType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Type/BuiltInType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Type/ClassType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Type/EmptyExprType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Type/Type.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/BinaryOp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/ERROR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/FunctionCollector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Name.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/ScopeCollector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/UnaryOp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compiler2018.iml" beforeDir="false" afterPath="$PROJECT_DIR$/compiler2018.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mxs.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mxs.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mxs.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MxsBaseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MxsBaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MxsLexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MxsLexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MxsListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MxsParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MxsVisitor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -88,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="343">
+              <caret line="34" column="66" lean-forward="true" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Semantic.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Semantic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
+            <state relative-caret-position="-1241">
+              <caret line="254" column="13" selection-start-line="254" selection-start-column="13" selection-end-line="254" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#664#665#0" expanded="true" />
@@ -120,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
-              <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+              <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#982#983#0" expanded="true" />
@@ -134,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -143,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/ScopeCollector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-437">
-              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ProgNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#462#463#0" expanded="true" />
@@ -171,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ASTNode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -205,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/src/Mxs.g4">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="206">
-              <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -293,11 +219,11 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTPrinter.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Error.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/ERROR.java" />
-        <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/ScopeCollector.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/FunctionCollector.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" />
+        <option value="$PROJECT_DIR$/src/main.java" />
       </list>
     </option>
   </component>
@@ -1114,7 +1040,7 @@
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ProgNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#462#463#0" expanded="true" />
@@ -1128,42 +1054,32 @@
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ASTNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Mxs.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
-          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="72" column="53" lean-forward="true" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#982#983#0" expanded="true" />
             <element signature="e#1012#1013#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1182,7 +1098,7 @@
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/ScopeCollector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-437">
-          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1191,14 +1107,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
+        <state relative-caret-position="-1241">
+          <caret line="254" column="13" selection-start-line="254" selection-start-column="13" selection-end-line="254" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#664#665#0" expanded="true" />
             <element signature="e#695#696#0" expanded="true" />
             <element signature="e#741#742#0" expanded="true" />
             <element signature="e#772#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="34" column="66" lean-forward="true" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
