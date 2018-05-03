@@ -1,0 +1,7 @@
+ProgNode
+  *FunctionDeclaration: main
+    BuiltInType: int
+    BlockNode
+      *VariableDeclaration: a
+        BuiltInType: int
+      ReturnNode

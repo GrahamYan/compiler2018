@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/compiler2018.iml" filepath="$PROJECT_DIR$/compiler2018.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test ast/test.iml" filepath="$PROJECT_DIR$/../test ast/test.iml" />
     </modules>
   </component>
 </project>
