@@ -11,7 +11,7 @@ import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.tree.*;
 import Parser.*;
 
-public class main {
+public class Main {
     public static void checkSemantic(ProgNode progNode) {
         Scope topLevelScope = new Scope(true);
         ERROR handle = new ERROR();
