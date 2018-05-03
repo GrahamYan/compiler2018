@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ASTBuilder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ASTBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
@@ -114,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="222">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -223,12 +216,12 @@
         <option value="$PROJECT_DIR$/src/Parser/MxsListener.java" />
         <option value="$PROJECT_DIR$/src/Parser/MxsParser.java" />
         <option value="$PROJECT_DIR$/src/Parser/MxsVisitor.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -448,7 +441,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="878" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -460,12 +453,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.33798882" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.33425415" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26967594" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1516927" />
       <window_info anchor="bottom" id="ANTLR Preview" order="12" weight="0.5359116" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1078,16 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -1133,6 +1116,16 @@
             <element signature="e#1012#1013#0" expanded="true" />
             <element signature="e#16936#16937#0" expanded="true" />
             <element signature="e#16994#16995#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
