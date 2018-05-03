@@ -39,7 +39,6 @@ public interface ASTVisitor {
     void visit(BlockNode node);
     void visit(IfNode node);
     void visit(ForNode node);
-
     void visit(WhileNode node);
     void visit(BreakNode node);
     void visit(ReturnNode node);

@@ -2,28 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Mxs.g4" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Mxs.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/Mxs.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/Mxs.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsBaseListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsBaseListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsBaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/Type/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/Type/Type.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/ERROR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/ERROR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/Semantic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/Semantic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/location.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/location.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mxs.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mxs.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/Mxs.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/Mxs.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,226 +21,106 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="Semantic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state relative-caret-position="125">
+              <caret line="249" column="23" selection-start-line="249" selection-start-column="23" selection-end-line="249" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ASTBuilder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ASTBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="435" selection-start-line="435" selection-end-line="435" />
+            <state relative-caret-position="257">
+              <caret line="294" column="31" lean-forward="true" selection-start-line="294" selection-start-column="31" selection-end-line="294" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#982#983#0" expanded="true" />
                 <element signature="e#1012#1013#0" expanded="true" />
+                <element signature="e#16936#16937#0" expanded="true" />
                 <element signature="e#16994#16995#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParseTreeWalker.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../intellij-plugin-v4/lib/antlr-4.7-intellij-1.8.4-version-complete.jar!/org/antlr/v4/runtime/tree/ParseTreeWalker.class">
+      <file leaf-file-name="Scope.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="-2495">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MxsBaseListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parser/MxsBaseListener.java">
+      <file leaf-file-name="CallExprNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" />
+            <state relative-caret-position="266">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MxsBaseVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parser/MxsBaseVisitor.java">
+      <file leaf-file-name="BinaryExprNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BinaryExprNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MxsLexer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parser/MxsLexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="361">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#368#437#0" expanded="true" />
-                <element signature="e#3694#3695#0" expanded="true" />
-                <element signature="e#3718#3719#0" expanded="true" />
-                <element signature="e#3768#3769#0" expanded="true" />
-                <element signature="e#3792#3793#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#687#688#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MxsListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parser/MxsListener.java">
+      <file leaf-file-name="MemberExprNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="389">
+              <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#873#874#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1294#1295#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MxsParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parser/MxsParser.java">
+      <file leaf-file-name="ClassDeclNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/ClassDeclNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="-48">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3588#3589#0" expanded="true" />
-                <element signature="e#3612#3613#0" expanded="true" />
-                <element signature="e#3662#3663#0" expanded="true" />
-                <element signature="e#3686#3687#0" expanded="true" />
-                <element signature="e#4264#4265#0" expanded="true" />
-                <element signature="e#4316#4317#0" expanded="true" />
-                <element signature="e#4355#4356#0" expanded="true" />
-                <element signature="e#4408#4409#0" expanded="true" />
-                <element signature="e#4450#4451#0" expanded="true" />
-                <element signature="e#4503#4504#0" expanded="true" />
-                <element signature="e#4544#4545#0" expanded="true" />
-                <element signature="e#4598#4599#0" expanded="true" />
-                <element signature="e#4642#4643#0" expanded="true" />
-                <element signature="e#4696#4697#0" expanded="true" />
-                <element signature="e#4739#4740#0" expanded="true" />
-                <element signature="e#4794#4795#0" expanded="true" />
-                <element signature="e#4873#4874#0" expanded="true" />
-                <element signature="e#4910#4911#0" expanded="true" />
-                <element signature="e#6892#6893#0" expanded="true" />
-                <element signature="e#6929#6930#0" expanded="true" />
-                <element signature="e#8083#8084#0" expanded="true" />
-                <element signature="e#8134#8135#0" expanded="true" />
-                <element signature="e#8170#8171#0" expanded="true" />
-                <element signature="e#8224#8225#0" expanded="true" />
-                <element signature="e#8254#8255#0" expanded="true" />
-                <element signature="e#8305#8306#0" expanded="true" />
-                <element signature="e#8376#8377#0" expanded="true" />
-                <element signature="e#8413#8414#0" expanded="true" />
-                <element signature="e#9809#9810#0" expanded="true" />
-                <element signature="e#9860#9861#0" expanded="true" />
-                <element signature="e#9896#9897#0" expanded="true" />
-                <element signature="e#9950#9951#0" expanded="true" />
-                <element signature="e#9980#9981#0" expanded="true" />
-                <element signature="e#10031#10032#0" expanded="true" />
-                <element signature="e#10101#10102#0" expanded="true" />
-                <element signature="e#10138#10139#0" expanded="true" />
-                <element signature="e#11498#11499#0" expanded="true" />
-                <element signature="e#11553#11554#0" expanded="true" />
-                <element signature="e#11591#11592#0" expanded="true" />
-                <element signature="e#11646#11647#0" expanded="true" />
-                <element signature="e#11686#11687#0" expanded="true" />
-                <element signature="e#11742#11743#0" expanded="true" />
-                <element signature="e#11810#11811#0" expanded="true" />
-                <element signature="e#11847#11848#0" expanded="true" />
-                <element signature="e#13369#13370#0" expanded="true" />
-                <element signature="e#13406#13407#0" expanded="true" />
-                <element signature="e#14580#14581#0" expanded="true" />
-                <element signature="e#14635#14636#0" expanded="true" />
-                <element signature="e#14673#14674#0" expanded="true" />
-                <element signature="e#14728#14729#0" expanded="true" />
-                <element signature="e#14801#14802#0" expanded="true" />
-                <element signature="e#14838#14839#0" expanded="true" />
-                <element signature="e#16605#16606#0" expanded="true" />
-                <element signature="e#16642#16643#0" expanded="true" />
-                <element signature="e#18218#18219#0" expanded="true" />
-                <element signature="e#18255#18256#0" expanded="true" />
-                <element signature="e#19460#19461#0" expanded="true" />
-                <element signature="e#19516#19517#0" expanded="true" />
-                <element signature="e#19554#19555#0" expanded="true" />
-                <element signature="e#19605#19606#0" expanded="true" />
-                <element signature="e#19642#19643#0" expanded="true" />
-                <element signature="e#19694#19695#0" expanded="true" />
-                <element signature="e#19734#19735#0" expanded="true" />
-                <element signature="e#19786#19787#0" expanded="true" />
-                <element signature="e#19825#19826#0" expanded="true" />
-                <element signature="e#19878#19879#0" expanded="true" />
-                <element signature="e#19920#19921#0" expanded="true" />
-                <element signature="e#19973#19974#0" expanded="true" />
-                <element signature="e#20014#20015#0" expanded="true" />
-                <element signature="e#20068#20069#0" expanded="true" />
-                <element signature="e#20171#20172#0" expanded="true" />
-                <element signature="e#20212#20213#0" expanded="true" />
-                <element signature="e#20284#20285#0" expanded="true" />
-                <element signature="e#20321#20322#0" expanded="true" />
-                <element signature="e#22475#22476#0" expanded="true" />
-                <element signature="e#22512#22513#0" expanded="true" />
-                <element signature="e#23676#23677#0" expanded="true" />
-                <element signature="e#23727#23728#0" expanded="true" />
-                <element signature="e#23765#23766#0" expanded="true" />
-                <element signature="e#23820#23821#0" expanded="true" />
-                <element signature="e#23854#23855#0" expanded="true" />
-                <element signature="e#23907#23908#0" expanded="true" />
-                <element signature="e#23939#23940#0" expanded="true" />
-                <element signature="e#23991#23992#0" expanded="true" />
-                <element signature="e#24061#24062#0" expanded="true" />
-                <element signature="e#24098#24099#0" expanded="true" />
-                <element signature="e#25413#25414#0" expanded="true" />
-                <element signature="e#25464#25465#0" expanded="true" />
-                <element signature="e#25501#25502#0" expanded="true" />
-                <element signature="e#25553#25554#0" expanded="true" />
-                <element signature="e#25623#25624#0" expanded="true" />
-                <element signature="e#25660#25661#0" expanded="true" />
-                <element signature="e#27313#27314#0" expanded="true" />
-                <element signature="e#27366#27367#0" expanded="true" />
-                <element signature="e#27435#27436#0" expanded="true" />
-                <element signature="e#27472#27473#0" expanded="true" />
-                <element signature="e#28613#28614#0" expanded="true" />
-                <element signature="e#28663#28664#0" expanded="true" />
-                <element signature="e#28698#28699#0" expanded="true" />
-                <element signature="e#28749#28750#0" expanded="true" />
-                <element signature="e#28818#28819#0" expanded="true" />
-                <element signature="e#28855#28856#0" expanded="true" />
-                <element signature="e#30802#30803#0" expanded="true" />
-                <element signature="e#30839#30840#0" expanded="true" />
-                <element signature="e#30971#30972#0" expanded="true" />
-                <element signature="e#30999#31000#0" expanded="true" />
-                <element signature="e#31198#31199#0" expanded="true" />
-                <element signature="e#31249#31250#0" expanded="true" />
-                <element signature="e#31285#31286#0" expanded="true" />
-                <element signature="e#31335#31336#0" expanded="true" />
-                <element signature="e#31370#31371#0" expanded="true" />
-                <element signature="e#31421#31422#0" expanded="true" />
-                <element signature="e#32108#32109#0" expanded="true" />
-                <element signature="e#32159#32160#0" expanded="true" />
-                <element signature="e#32870#32871#0" expanded="true" />
-                <element signature="e#32921#32922#0" expanded="true" />
-                <element signature="e#32951#32952#0" expanded="true" />
-                <element signature="e#33002#33003#0" expanded="true" />
-                <element signature="e#33714#33715#0" expanded="true" />
-                <element signature="e#33765#33766#0" expanded="true" />
-                <element signature="e#33801#33802#0" expanded="true" />
-                <element signature="e#33851#33852#0" expanded="true" />
-                <element signature="e#33886#33887#0" expanded="true" />
-                <element signature="e#33937#33938#0" expanded="true" />
-                <element signature="e#34623#34624#0" expanded="true" />
-                <element signature="e#34675#34676#0" expanded="true" />
-                <element signature="e#36723#36724#0" expanded="true" />
-                <element signature="e#36774#36775#0" expanded="true" />
-                <element signature="e#38163#38164#0" expanded="true" />
-                <element signature="e#38217#38218#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -263,17 +129,8 @@
       <file leaf-file-name="Mxs.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Mxs.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MxsVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parser/MxsVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            <state relative-caret-position="183">
+              <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -296,20 +153,23 @@
       <find>classname</find>
       <find>ErrorHandle</find>
       <find>wtl</find>
-      <find>try</find>
       <find>funname</find>
       <find>error</find>
       <find>funcdecl</find>
       <find>exitparams</find>
       <find>node.setexprtype(node.getarray</find>
       <find>&quot;'[]'can</find>
+      <find>functioncall</find>
+      <find>call</find>
+      <find>try</find>
+      <find>mem</find>
     </findStrings>
     <replaceStrings>
       <replace>{</replace>
       <replace>funcname</replace>
-      <replace>Mxs</replace>
       <replace>error</replace>
       <replace>graham</replace>
+      <replace>Mxs</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -318,11 +178,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ExprListNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IdentifierExprNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IntconstNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IntConstNode.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NewExprNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NullConstNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/OrExprNode.java" />
@@ -350,17 +208,14 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/StmtNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ProgNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/error.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTPrinter.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Error.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/ScopeCollector.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/FunctionCollector.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/location.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/Type/Type.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/ERROR.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" />
         <option value="$PROJECT_DIR$/src/Mxs.g4" />
         <option value="$PROJECT_DIR$/src/Parser/MxsBaseListener.java" />
         <option value="$PROJECT_DIR$/src/Parser/MxsBaseVisitor.java" />
@@ -369,12 +224,17 @@
         <option value="$PROJECT_DIR$/src/Parser/MxsParser.java" />
         <option value="$PROJECT_DIR$/src/Parser/MxsVisitor.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="width" value="977" />
+    <option name="width" value="1098" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -418,6 +278,24 @@
               <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
               <item name="AST" type="462c0819:PsiDirectoryNode" />
               <item name="node" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="AST" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="DeclNode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
+              <item name="AST" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="ExprNode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
@@ -570,25 +448,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="0" width="878" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Tool Output" order="8" weight="0.32960895" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.015363129" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.01519337" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3314917" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.33798882" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.103515625" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="12" weight="0.87016577" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26967594" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="12" weight="0.5359116" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -645,40 +523,10 @@
           <properties />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/PrefixExprNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/StringConstNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/SuffixExprNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" column="1" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ThisExprNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -784,6 +632,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -860,17 +711,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ExprStmtNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/VarDeclNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -881,13 +728,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -931,28 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ASTNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/FunctionCollector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-          <folding>
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,17 +784,6 @@
           <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1294#1295#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1005,20 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="146" column="49" lean-forward="true" selection-start-line="146" selection-start-column="49" selection-end-line="146" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#772#773#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser/MxsLexer.tokens">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1026,26 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="435" selection-start-line="435" selection-end-line="435" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#16994#16995#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mxs.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1235,12 +1012,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ExprStmtNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/tool/ASTVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2495">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BinaryExprNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#687#688#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/FunctionCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding>
+            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/ClassDeclNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="29" column="28" lean-forward="true" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="249" column="23" selection-start-line="249" selection-start-column="23" selection-end-line="249" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Mxs.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="294" column="31" lean-forward="true" selection-start-line="294" selection-start-column="31" selection-end-line="294" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#982#983#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#16936#16937#0" expanded="true" />
+            <element signature="e#16994#16995#0" expanded="true" />
           </folding>
         </state>
       </provider>

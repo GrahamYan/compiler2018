@@ -289,7 +289,7 @@ public class ASTBuilder extends MxsBaseListener{
         MemberExprNode memberExprNode;
         if(ctx.functionCall().funcname() != null)
             memberExprNode = new MemberExprNode(new location(ctx.getStart().getLine(), 0),
-                    getExpr(ctx.expr()), (CallExprNode)map.get(ctx.functionCall().funcname()));
+                    getExpr(ctx.expr()), (CallExprNode)map.get(ctx.functionCall()));
         else
             memberExprNode = new MemberExprNode(new location(ctx.getStart().getLine(), 0),
                     getExpr(ctx.expr()), ctx.ID().getText());
@@ -407,6 +407,20 @@ public class ASTBuilder extends MxsBaseListener{
         List<ExprNode> params = new ArrayList<>();
         if(ctx.exprs() != null) {
             for (MxsParser.ExprContext item : ctx.exprs().expr()) {
+                params.add((ExprNode) map.get(item));
+            }
+        }
+        map.put(ctx, new CallExprNode(new location(ctx.getStart().getLine(), 0), ctx.funcname().getText(),
+                new ExprListNode(new location(ctx.getStart().getLine(), 0), params)));
+    }
+    @Override
+    public void exitFunctionCall(MxsParser.FunctionCallContext ctx)
+    {
+        List<ExprNode> params = new ArrayList<>();
+        if(ctx.exprs() != null)
+        {
+            for (MxsParser.ExprContext item : ctx.exprs().expr())
+            {
                 params.add((ExprNode) map.get(item));
             }
         }
