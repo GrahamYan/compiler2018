@@ -296,13 +296,6 @@ public interface MxsVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAndExpr(MxsParser.AndExprContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code nonArrayNew}
-	 * labeled alternative in {@link MxsParser#news}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNonArrayNew(MxsParser.NonArrayNewContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code wrongNew}
 	 * labeled alternative in {@link MxsParser#news}.
 	 * @param ctx the parse tree
@@ -316,6 +309,13 @@ public interface MxsVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitArrayNew(MxsParser.ArrayNewContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code nonArrayNew}
+	 * labeled alternative in {@link MxsParser#news}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNonArrayNew(MxsParser.NonArrayNewContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link MxsParser#functionCall}.
 	 * @param ctx the parse tree

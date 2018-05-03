@@ -492,18 +492,6 @@ public interface MxsListener extends ParseTreeListener {
 	 */
 	void exitAndExpr(MxsParser.AndExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code nonArrayNew}
-	 * labeled alternative in {@link MxsParser#news}.
-	 * @param ctx the parse tree
-	 */
-	void enterNonArrayNew(MxsParser.NonArrayNewContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code nonArrayNew}
-	 * labeled alternative in {@link MxsParser#news}.
-	 * @param ctx the parse tree
-	 */
-	void exitNonArrayNew(MxsParser.NonArrayNewContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code wrongNew}
 	 * labeled alternative in {@link MxsParser#news}.
 	 * @param ctx the parse tree
@@ -527,6 +515,18 @@ public interface MxsListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitArrayNew(MxsParser.ArrayNewContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code nonArrayNew}
+	 * labeled alternative in {@link MxsParser#news}.
+	 * @param ctx the parse tree
+	 */
+	void enterNonArrayNew(MxsParser.NonArrayNewContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code nonArrayNew}
+	 * labeled alternative in {@link MxsParser#news}.
+	 * @param ctx the parse tree
+	 */
+	void exitNonArrayNew(MxsParser.NonArrayNewContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MxsParser#functionCall}.
 	 * @param ctx the parse tree

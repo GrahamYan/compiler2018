@@ -87,9 +87,9 @@ expr : funcname '(' exprs? ')'                          #callExpr//expression
     | 'this'                                                #thisExpr//this
     ;
 
-news : classname                                                    #nonArrayNew
-    | (classname | basetype) ('[' expr ']')* ('[' ']')+ ('[' expr ']')+ #wrongNew
+news : (classname | basetype) ('[' expr ']')* ('[' ']')+ ('[' expr ']')+ #wrongNew
     | (classname | basetype) ('[' expr ']')+ ('[' ']')*     #arrayNew
+    | classname                                                    #nonArrayNew
     ;
 
 functionCall : funcname '(' exprs? ')';

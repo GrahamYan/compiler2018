@@ -531,18 +531,6 @@ public class MxsBaseListener implements MxsListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNonArrayNew(MxsParser.NonArrayNewContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNonArrayNew(MxsParser.NonArrayNewContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterWrongNew(MxsParser.WrongNewContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -562,6 +550,18 @@ public class MxsBaseListener implements MxsListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitArrayNew(MxsParser.ArrayNewContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNonArrayNew(MxsParser.NonArrayNewContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNonArrayNew(MxsParser.NonArrayNewContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
