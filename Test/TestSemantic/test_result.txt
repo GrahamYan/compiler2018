@@ -1,7 +1,14 @@
 ProgNode
+  *ClassDeclaration: Array
+    *FunctionDeclaration: size
+      BuiltInType: int
+      BlockNode
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
       *VariableDeclaration: a
-        BuiltInType: int
-      ReturnNode
+        ClassType: Array
+        NullConstNode
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: a

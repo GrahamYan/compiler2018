@@ -25,9 +25,9 @@ public class Main {
     }
 
     public static void printAST(ProgNode program) throws Exception {
-        //FileOutputStream outputStream = new FileOutputStream("Test/TestSemantic/test_result.txt");
+        FileOutputStream outputStream = new FileOutputStream("Test/TestSemantic/test_result.txt");
         ASTPrinter printer = new ASTPrinter();
-        //printer.PrintAST(program, outputStream);
+        printer.PrintAST(program, outputStream);
     }
 
     public static void main(String[] args) throws Exception {
@@ -46,7 +46,7 @@ public class Main {
         ASTBuilder constructor = new ASTBuilder();
         walker.walk(constructor, tree);
 
-        printAST(constructor.getProgram());
+ //       printAST(constructor.getProgram());
 
         checkSemantic(constructor.getProgram());
     }

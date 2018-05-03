@@ -212,9 +212,9 @@ public class ASTBuilder extends MxsBaseListener{
         map.put(ctx, exprStatNode);
     }
     @Override
-    public void exitParams(MxsParser.ParamsContext ctx) {
+    public void exitExprs(MxsParser.ExprsContext ctx) {
         List<ExprNode> exprNodes = new ArrayList<>();
-        for (MxsParser.ParamContext item : ctx.param()) {
+        for (MxsParser.ExprContext item : ctx.expr()) {
             exprNodes.add((ExprNode) map.get(item));
         }
         ExprListNode exprListNode = new ExprListNode(new location(ctx.getStart().getLine(), 0), exprNodes);
