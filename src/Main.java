@@ -46,7 +46,7 @@ public class Main {
         ASTBuilder constructor = new ASTBuilder();
         walker.walk(constructor, tree);
 
- //       printAST(constructor.getProgram());
+        //printAST(constructor.getProgram());
 
         checkSemantic(constructor.getProgram());
     }

@@ -1,14 +1,374 @@
 ProgNode
-  *ClassDeclaration: Array
-    *FunctionDeclaration: size
-      BuiltInType: int
-      BlockNode
+  *VariableDeclaration: N
+    BuiltInType: int
+  *VariableDeclaration: head
+    BuiltInType: int
+  *VariableDeclaration: startx
+    BuiltInType: int
+  *VariableDeclaration: starty
+    BuiltInType: int
+  *VariableDeclaration: targetx
+    BuiltInType: int
+  *VariableDeclaration: targety
+    BuiltInType: int
+  *VariableDeclaration: x
+    BuiltInType: int
+  *VariableDeclaration: y
+    BuiltInType: int
+  *VariableDeclaration: xlist
+    ArrayType: int
+  *VariableDeclaration: ylist
+    ArrayType: int
+  *VariableDeclaration: tail
+    BuiltInType: int
+  *VariableDeclaration: ok
+    BuiltInType: int
+  *VariableDeclaration: now
+    BuiltInType: int
+  *VariableDeclaration: dx
+    ArrayType: int
+  *VariableDeclaration: dy
+    ArrayType: int
+  *VariableDeclaration: step
+    ArrayType: int
+  *VariableDeclaration: i
+    BuiltInType: int
+  *VariableDeclaration: j
+    BuiltInType: int
+  *FunctionDeclaration: origin
+    BuiltInType: void
+    FuncParamNode Type: int    Name: N
+    BlockNode
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: step
+      ForNode
+        AssignExprNode
+          IdentifierExprNode  ID name: i
+          IntConstNode  value = 0
+        BinaryExprNode  Op: SLT
+          IdentifierExprNode  ID name: i
+          IdentifierExprNode  ID name: N
+        AssignExprNode
+          IdentifierExprNode  ID name: i
+          SuffixExprNode  Op: SUF_INC
+            IdentifierExprNode  ID name: i
+        BlockNode
+          ExprStmtNode
+            AssignExprNode
+              ArrayExprNode
+                IdentifierExprNode  ID name: step
+                IdentifierExprNode  ID name: i
+          ForNode
+            AssignExprNode
+              IdentifierExprNode  ID name: j
+              IntConstNode  value = 0
+            BinaryExprNode  Op: SLT
+              IdentifierExprNode  ID name: j
+              IdentifierExprNode  ID name: N
+            AssignExprNode
+              IdentifierExprNode  ID name: j
+              SuffixExprNode  Op: SUF_INC
+                IdentifierExprNode  ID name: j
+            ExprStmtNode
+              AssignExprNode
+                ArrayExprNode
+                  ArrayExprNode
+                    IdentifierExprNode  ID name: step
+                    IdentifierExprNode  ID name: i
+                  IdentifierExprNode  ID name: j
+                IntConstNode  value = 0
+  *FunctionDeclaration: check
+    BuiltInType: bool
+    FuncParamNode Type: int    Name: a
+    BlockNode
+      ReturnNode
+  *FunctionDeclaration: addList
+    BuiltInType: void
+    FuncParamNode Type: int    Name: x
+    FuncParamNode Type: int    Name: y
+    BlockNode
+      IfNode
+        AndExprNode
+          AndExprNode
+            CallExprNode  Function Name: check
+              ExprListNode
+                IdentifierExprNode  ID name: x
+            CallExprNode  Function Name: check
+              ExprListNode
+                IdentifierExprNode  ID name: y
+          BinaryExprNode  Op: EQU
+            ArrayExprNode
+              ArrayExprNode
+                IdentifierExprNode  ID name: step
+                IdentifierExprNode  ID name: x
+              IdentifierExprNode  ID name: y
+            PrefixExprNode  Op: NEG
+              IntConstNode  value = 1
+        BlockNode
+          ExprStmtNode
+            SuffixExprNode  Op: SUF_INC
+              IdentifierExprNode  ID name: tail
+          ExprStmtNode
+            AssignExprNode
+              ArrayExprNode
+                IdentifierExprNode  ID name: xlist
+                IdentifierExprNode  ID name: tail
+              IdentifierExprNode  ID name: x
+          ExprStmtNode
+            AssignExprNode
+              ArrayExprNode
+                IdentifierExprNode  ID name: ylist
+                IdentifierExprNode  ID name: tail
+              IdentifierExprNode  ID name: y
+          ExprStmtNode
+            AssignExprNode
+              ArrayExprNode
+                ArrayExprNode
+                  IdentifierExprNode  ID name: step
+                  IdentifierExprNode  ID name: x
+                IdentifierExprNode  ID name: y
+              BinaryExprNode  Op: ADD
+                IdentifierExprNode  ID name: now
+                IntConstNode  value = 1
+          IfNode
+            AndExprNode
+              BinaryExprNode  Op: EQU
+                IdentifierExprNode  ID name: x
+                IdentifierExprNode  ID name: targetx
+              BinaryExprNode  Op: EQU
+                IdentifierExprNode  ID name: y
+                IdentifierExprNode  ID name: targety
+            ExprStmtNode
+              AssignExprNode
+                IdentifierExprNode  ID name: ok
+                IntConstNode  value = 1
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: a
-        ClassType: Array
-        NullConstNode
       ExprStmtNode
-        MemberExprNode
-          IdentifierExprNode  ID name: a
+        CallExprNode  Function Name: origin
+          ExprListNode
+            IntConstNode  value = 106
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: N
+          CallExprNode  Function Name: getInt
+            ExprListNode
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: targetx
+          BinaryExprNode  Op: MIN
+            IdentifierExprNode  ID name: N
+            IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: targety
+          BinaryExprNode  Op: MIN
+            IdentifierExprNode  ID name: N
+            IntConstNode  value = 1
+      ForNode
+        AssignExprNode
+          IdentifierExprNode  ID name: i
+          IntConstNode  value = 0
+        BinaryExprNode  Op: SLT
+          IdentifierExprNode  ID name: i
+          IdentifierExprNode  ID name: N
+        SuffixExprNode  Op: SUF_INC
+          IdentifierExprNode  ID name: i
+        ForNode
+          AssignExprNode
+            IdentifierExprNode  ID name: j
+            IntConstNode  value = 0
+          BinaryExprNode  Op: SLT
+            IdentifierExprNode  ID name: j
+            IdentifierExprNode  ID name: N
+          SuffixExprNode  Op: SUF_INC
+            IdentifierExprNode  ID name: j
+          ExprStmtNode
+            AssignExprNode
+              ArrayExprNode
+                ArrayExprNode
+                  IdentifierExprNode  ID name: step
+                  IdentifierExprNode  ID name: i
+                IdentifierExprNode  ID name: j
+              PrefixExprNode  Op: NEG
+                IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 0
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 2
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 0
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 1
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 2
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 1
+          IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 2
+          IntConstNode  value = 2
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 2
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 3
+          IntConstNode  value = 2
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 3
+          IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 4
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 4
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 2
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 5
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 5
+          IntConstNode  value = 2
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 6
+          IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 6
+          PrefixExprNode  Op: NEG
+            IntConstNode  value = 2
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dx
+            IntConstNode  value = 7
+          IntConstNode  value = 1
+      ExprStmtNode
+        AssignExprNode
+          ArrayExprNode
+            IdentifierExprNode  ID name: dy
+            IntConstNode  value = 7
+          IntConstNode  value = 2
+      WhileNode
+        BinaryExprNode  Op: SEQ
+          IdentifierExprNode  ID name: head
+          IdentifierExprNode  ID name: tail
+        BlockNode
+          ExprStmtNode
+            AssignExprNode
+              IdentifierExprNode  ID name: x
+              ArrayExprNode
+                IdentifierExprNode  ID name: xlist
+                IdentifierExprNode  ID name: head
+          ExprStmtNode
+            AssignExprNode
+              IdentifierExprNode  ID name: y
+              ArrayExprNode
+                IdentifierExprNode  ID name: ylist
+                IdentifierExprNode  ID name: head
+          ExprStmtNode
+            AssignExprNode
+              IdentifierExprNode  ID name: now
+              ArrayExprNode
+                ArrayExprNode
+                  IdentifierExprNode  ID name: step
+                  IdentifierExprNode  ID name: x
+                IdentifierExprNode  ID name: y
+          ForNode
+            AssignExprNode
+              IdentifierExprNode  ID name: j
+              IntConstNode  value = 0
+            BinaryExprNode  Op: SLT
+              IdentifierExprNode  ID name: j
+              IntConstNode  value = 8
+            SuffixExprNode  Op: SUF_INC
+              IdentifierExprNode  ID name: j
+            ExprStmtNode
+              CallExprNode  Function Name: addList
+                ExprListNode
+                  BinaryExprNode  Op: ADD
+                    IdentifierExprNode  ID name: x
+                    ArrayExprNode
+                      IdentifierExprNode  ID name: dx
+                      IdentifierExprNode  ID name: j
+                  BinaryExprNode  Op: ADD
+                    IdentifierExprNode  ID name: y
+                    ArrayExprNode
+                      IdentifierExprNode  ID name: dy
+                      IdentifierExprNode  ID name: j
+          IfNode
+            BinaryExprNode  Op: EQU
+              IdentifierExprNode  ID name: ok
+              IntConstNode  value = 1
+            BreakNode
+          ExprStmtNode
+            SuffixExprNode  Op: SUF_INC
+              IdentifierExprNode  ID name: head
+      IfNode
+        BinaryExprNode  Op: EQU
+          IdentifierExprNode  ID name: ok
+          IntConstNode  value = 1
+        ExprStmtNode
+          CallExprNode  Function Name: println
+            ExprListNode
+              CallExprNode  Function Name: toString
+                ExprListNode
+                  ArrayExprNode
+                    ArrayExprNode
+                      IdentifierExprNode  ID name: step
+                      IdentifierExprNode  ID name: targetx
+                    IdentifierExprNode  ID name: targety
+        ExprStmtNode
+          CallExprNode  Function Name: print
+            ExprListNode
+              StringConstNode  value = "no solution!\n"
+      ReturnNode

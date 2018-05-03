@@ -42,11 +42,11 @@ param : defvar;                                         //parameter
 block : '{' stmt* '}';                                  //block of codes
 
 stmt : block                                            #blockStmt//statement
-    | op = 'if' '(' expr '0' stmt ('else' stmt)?            #ifStmt//if
+    | op = 'if' '(' expr ')' stmt ('else' stmt)?            #ifStmt//if
     | op ='for' '(' start = expr? ';'
                     condition = expr? ';'
                     update = expr? ')' stmt                 #forStmt//for
-    | op = 'while' '(' expr? '0' stmt                       #whileStmt//while
+    | op = 'while' '(' expr? ')' stmt                       #whileStmt//while
     | op = 'return' expr? ';'                               #returnStmt//return
     | 'break' ';'                                           #breakStmt//break
     | 'continue' ';'                                        #continueStmt//continue
@@ -87,9 +87,9 @@ expr : funcname '(' exprs? ')'                          #callExpr//expression
     | 'this'                                                #thisExpr//this
     ;
 
-news : classname                                                    #nonArrayNew
-    | (classname | basetype) ('[' expr ']')* ('[' ']')+ ('[' expr ']')+ #wrongNew
+news : (classname | basetype) ('[' expr ']')* ('[' ']')+ ('[' expr ']')+ #wrongNew
     | (classname | basetype) ('[' expr ']')+ ('[' ']')*     #arrayNew
+    | classname                                                    #nonArrayNew
     ;
 
 functionCall : funcname '(' exprs? ')';
