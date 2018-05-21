@@ -79,7 +79,7 @@ expr : funcname '(' exprs? ')'                          #callExpr//expression
 //    | expr '?' expr ':' expr                                //other king of if
     | varname                                               #idExpr//variable name
     | NUM                                                   #intConstExpr//num
-    |'0'                                                    #intConstExpr
+   // |'0'                                                    #intConstExpr
     | STR                                                   #stringConstExpr//string
     | ('NULL' | 'null')                                     #nullExpr//null
     | ('TRUE' | 'true' | 'FALSE' | 'false')                 #boolConstExpr//true or false
@@ -99,7 +99,7 @@ functionCall : funcname '(' exprs? ')';
 
 STR : '"' ('\\"' | '\\\\'|.)*? '"' ;                    //string
 
-NUM :  [1-9] [0-9]*  ;                    //number
+NUM :  [1-9] [0-9]* | '0' ;                    //number
 
 WS : ( ' ' | '\t' | '\n' | '\r' ) + -> skip;            //whitespace
 

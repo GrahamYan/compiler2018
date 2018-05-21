@@ -287,7 +287,7 @@ public class ASTBuilder extends MxsBaseListener{
     @Override
     public void exitMemberExpr(MxsParser.MemberExprContext ctx) {
         MemberExprNode memberExprNode;
-        if(ctx.functionCall().funcname() != null)
+        if(ctx.functionCall() != null)
             memberExprNode = new MemberExprNode(new location(ctx.getStart().getLine(), 0),
                     getExpr(ctx.expr()), (CallExprNode)map.get(ctx.functionCall()));
         else

@@ -247,8 +247,6 @@ public class Semantic implements ASTVisitor {
     public void visit(MemberExprNode node) {
         if(node == null) return;
         visit(node.getExpress());
-        if (node.getFunctionCall() == null)
-            error.addError(node.getLocation(), node.getFunctionCall().toString());
         if(!(node.getExpress().getExprType() instanceof ClassType)) {
             if(node.getExpress().getExprType() instanceof ArrayType
                     && node.isFunctionCall()
