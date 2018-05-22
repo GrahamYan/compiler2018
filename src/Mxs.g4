@@ -89,7 +89,7 @@ expr : funcname '(' exprs? ')'                          #callExpr//expression
 
 news : (classname | basetype) ('[' expr ']')* ('[' ']')+ ('[' expr ']')+ #wrongNew
     | (classname | basetype) ('[' expr ']')+ ('[' ']')*     #arrayNew
-    | classname                                                    #nonArrayNew
+    | (classname | basetype) ('(' exprs ')')?                  #nonArrayNew
     ;
 
 functionCall : funcname '(' exprs? ')';
@@ -111,6 +111,6 @@ TRUE : 'true' | 'TRUE';
 
 FALSE : 'false' | 'FALSE';
 
-ID : [a-zA-Z_] [a-zA-Z_0-9]*;
+ID : [a-zA-Z] [a-zA-Z_0-9]*;
 
 

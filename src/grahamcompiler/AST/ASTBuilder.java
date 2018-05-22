@@ -78,6 +78,7 @@ public class ASTBuilder extends MxsBaseListener{
     @Override
     public void exitDefvars(MxsParser.DefvarsContext ctx) {
         location pos = new location(ctx.getStart().getLine(), 0);
+        int dimension = getBracketNumber(ctx.getText());
         Type type = (Type)map.get(ctx.type());
         String id = ctx.varname().getText();
         ExprNode expr = (ExprNode) map.get(ctx.expr());
@@ -243,7 +244,11 @@ public class ASTBuilder extends MxsBaseListener{
     }
     @Override
     public void exitNonArrayNew(MxsParser.NonArrayNewContext ctx) {
-        Type type = new Type(ctx.classname().ID().getText(), 1);
+        Type type;
+        if (ctx.classname() != null) {
+            type = new Type(ctx.classname().ID().getText(),1);
+        }
+        else type = new Type(ctx.classname().getText(),1);
         map.put(ctx, new CreatorExprNode(new location(ctx.getStart().getLine(), 0), type, new ArrayList<>(), 0));
     }
     @Override
