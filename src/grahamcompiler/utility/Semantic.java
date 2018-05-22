@@ -165,6 +165,9 @@ import java.util.Stack;
                 else if(((ArrayType) node.getLeft().getExprType()).getDimension() != ((ArrayType) node.getRight().getExprType()).getDimension())
                     error.addError(node.getLocation(), "type mismatch");
             }
+            else if (node.getRight().getExprType() instanceof ArrayType){
+                error.addError(node.getLocation(),"cannot cast from var to array");
+            }
             else if (node.getLeft().getExprType().getTypeName() != node.getRight().getExprType().getTypeName())
                 error.addError(node.getLocation(), "cannot cast from "
                         + node.getLeft().getExprType().getTypeName().toString() + " to "

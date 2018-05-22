@@ -2,12 +2,24 @@ ProgNode
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: a
-        BuiltInType: int
-        IntConstNode  value = 1
       *VariableDeclaration: x
         BuiltInType: int
-        ArrayExprNode
-          IdentifierExprNode  ID name: a
+      *VariableDeclaration: i
+        BuiltInType: int
+      ForNode
+        AssignExprNode
+          IdentifierExprNode  ID name: i
+          ArrayExprNode
+            IntConstNode  value = 2
+        BinaryExprNode  Op: SLT
           IntConstNode  value = 1
+          IntConstNode  value = 2
+        PrefixExprNode  Op: INC
+          IdentifierExprNode  ID name: x
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: x
+            BinaryExprNode  Op: ADD
+              IdentifierExprNode  ID name: x
+              IntConstNode  value = 1
       ReturnNode
