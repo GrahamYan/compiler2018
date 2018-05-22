@@ -1,59 +1,13 @@
 ProgNode
-  *ClassDeclaration: Cat
-    *FunctionDeclaration: greet
-      BuiltInType: void
-      BlockNode
-        ExprStmtNode
-          CallExprNode  Function Name: println
-            ExprListNode
-              StringConstNode  value = "MIAOMIAOMIAO"
-  *ClassDeclaration: Lamb
-    *FunctionDeclaration: greet
-      BuiltInType: void
-      BlockNode
-        ExprStmtNode
-          CallExprNode  Function Name: println
-            ExprListNode
-              StringConstNode  value = "MIEMIEMIE"
-  *ClassDeclaration: Animals
-    *FunctionDeclaration: greet
-      BuiltInType: void
-      BlockNode
-        ExprStmtNode
-          MemberExprNode
-            IdentifierExprNode  ID name: c
-        ExprStmtNode
-          MemberExprNode
-            IdentifierExprNode  ID name: l
-    *VariableDeclaration: c
-      ClassType: Cat
-    *VariableDeclaration: l
-      ClassType: Lamb
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: cat
-        ClassType: Cat
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: cat
-      *VariableDeclaration: lamb
-        ClassType: Lamb
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: lamb
       *VariableDeclaration: a
-        ClassType: Animals
-      ExprStmtNode
-        AssignExprNode
-          MemberExprNode
-            IdentifierExprNode  ID name: a
-          IdentifierExprNode  ID name: cat
-      ExprStmtNode
-        AssignExprNode
-          MemberExprNode
-            IdentifierExprNode  ID name: a
-          IdentifierExprNode  ID name: lamb
-      ExprStmtNode
-        MemberExprNode
+        BuiltInType: int
+        IntConstNode  value = 1
+      *VariableDeclaration: x
+        BuiltInType: int
+        ArrayExprNode
           IdentifierExprNode  ID name: a
+          IntConstNode  value = 1
+      ReturnNode

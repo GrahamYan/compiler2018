@@ -11,10 +11,10 @@ import grahamcompiler.Type.*;
 import java.util.List;
 import java.util.Stack;
 
-public class Semantic implements ASTVisitor {
-    private Scope currentScope;
-    private Stack<Scope> scopeStack = new Stack<>();
-    private ERROR error;
+    public class Semantic implements ASTVisitor {
+        private Scope currentScope;
+        private Stack<Scope> scopeStack = new Stack<>();
+        private ERROR error;
     private FuncDeclNode currentFunction;
     private ClassDeclNode currentClass;
 
@@ -146,7 +146,6 @@ public class Semantic implements ASTVisitor {
             error.addError(node.getLocation(),
                     "'[]' can not be applied to non-array element" + node.getArray().getExprType().getTypeName().toString());
         node.setExprType(((ArrayType)node.getArray().getExprType()).getBasicType());
-        //TODO set Expr type
     }
 
     @Override
