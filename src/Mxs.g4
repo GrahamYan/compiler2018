@@ -25,9 +25,9 @@ basetype : ('int' | 'bool' | 'void' | 'string');        //base type
 
 classname : ID;                                         //class type
 
-    defclass : 'class' classname '{'                        //define class
-    (func = ID '(' ')' block
-    | defunc
+defclass : 'class' classname '{'                        //define class
+    (//func = ID '(' ')' block |
+    defunc
     | defvars
     )* '}';
 
