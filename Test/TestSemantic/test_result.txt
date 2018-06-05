@@ -1,10 +1,19 @@
 ProgNode
-  *ClassDeclaration: A
-  *ClassDeclaration: B
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: b
-        ClassType: A
       *VariableDeclaration: a
-        ClassType: B
+        BuiltInType: int
+        IntConstNode  value = 1
+      *VariableDeclaration: b
+        BuiltInType: int
+        IntConstNode  value = 2
+      *VariableDeclaration: c
+        BuiltInType: int
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: c
+          BinaryExprNode  Op: ADD
+            IdentifierExprNode  ID name: a
+            IdentifierExprNode  ID name: b
+      ReturnNode

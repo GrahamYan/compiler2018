@@ -1,0 +1,14 @@
+package grahamcompiler.IR.Value;
+
+public class Immediate extends IntergerValue {
+    private int value;
+
+    public Immediate(int value) {this.value = value;}
+
+    public int getValue() {return value;}
+
+    public void addValue(int v) {value += v;}
+
+    @Override
+    public String toString() {return "Immediate:" + String.valueOf(value);}
+}

@@ -27,7 +27,7 @@ public class ASTBuilder extends MxsBaseListener{
     public ASTBuilder() {}
     public ProgNode getProgram() {
         return program;
-    }
+}
     @Override
     public void exitCompilationUnit(MxsParser.CompilationUnitContext ctx) {
         List<DeclNode> declNodes = new LinkedList<>();

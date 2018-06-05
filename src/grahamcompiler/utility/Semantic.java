@@ -11,10 +11,10 @@ import grahamcompiler.Type.*;
 import java.util.List;
 import java.util.Stack;
 
-    public class Semantic implements ASTVisitor {
-        private Scope currentScope;
-        private Stack<Scope> scopeStack = new Stack<>();
-        private ERROR error;
+public class Semantic implements ASTVisitor {
+    private Scope currentScope;
+    private Stack<Scope> scopeStack = new Stack<>();
+    private ERROR error;
     private FuncDeclNode currentFunction;
     private ClassDeclNode currentClass;
 
