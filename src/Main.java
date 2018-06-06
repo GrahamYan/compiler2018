@@ -83,14 +83,14 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         //     InputStream is = System.in;
-        InputStream is = new FileInputStream("Test/TestSemantic/text.txt");
-        //InputStream is = new FileInputStream("program.txt");
+        //InputStream is = new FileInputStream("Test/TestSemantic/text.txt");
+        InputStream is = new FileInputStream("program.txt");
         OutputStream out = System.out;
         ProgNode program = buildAST(is);
-        printAST(program);
+  //      printAST(program);
         checkSemantic(program);
         IRGenerator irGenerator = generateIR(program);
-        printIR(irGenerator);
+  //      printIR(irGenerator);
         translate(irGenerator,out);
     }
 

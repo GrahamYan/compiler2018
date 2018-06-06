@@ -2,108 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmInst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Translator/StackSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/grahamcompiler/Translator/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ASTNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ASTNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/ClassDeclNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/ClassDeclNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/DeclNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/DeclNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/FuncDeclNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/FuncDeclNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/FuncParamNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/FuncParamNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/VarDeclNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/DeclNode/VarDeclNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/AndExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/AndExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ArrayExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ArrayExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/AssignExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/AssignExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/BinaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/BinaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/BoolConstNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/BoolConstNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/CallExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/CallExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ConditionExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ConditionExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ConstExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ConstExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/CreatorExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/CreatorExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ExprListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ExprListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/IdentifierExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/IdentifierExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/IntConstNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/IntConstNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/MemberExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/MemberExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/NewExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/NewExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/NullConstNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/NullConstNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/OrExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/OrExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/PrefixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/PrefixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/StringConstNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/StringConstNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/SuffixExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/SuffixExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ThisExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/ThisExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/UnaryExprNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ExprNode/UnaryExprNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ProgNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/ProgNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/BlockNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/BlockNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/BreakNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/BreakNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ContinueNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ContinueNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ExprStmtNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ExprStmtNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ForNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ForNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/IfNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/IfNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ReturnNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/ReturnNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/StmtNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/StmtNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/WhileNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/AST/node/StmtNode/WhileNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/Scope.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/utility/Scope.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ASTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ASTNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/ClassDeclNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/ClassDeclNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/DeclNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/DeclNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/FuncDeclNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/FuncDeclNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/FuncParamNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/FuncParamNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/VarDeclNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/DeclNode/VarDeclNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/AndExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/AndExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ArrayExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ArrayExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/AssignExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/AssignExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BinaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BinaryExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BoolConstNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BoolConstNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ConditionExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ConditionExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ConstExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ConstExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CreatorExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CreatorExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ExprListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ExprListNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IdentifierExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IdentifierExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IntConstNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IntConstNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/MemberExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NewExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NewExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NullConstNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/NullConstNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/OrExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/OrExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/PrefixExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/PrefixExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/StringConstNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/StringConstNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/SuffixExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/SuffixExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ThisExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/ThisExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/UnaryExprNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/UnaryExprNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ProgNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/ProgNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/BlockNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/BlockNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/BreakNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/BreakNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ContinueNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ContinueNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ExprStmtNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ExprStmtNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ForNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ForNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/IfNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/IfNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ReturnNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ReturnNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/StmtNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/StmtNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/WhileNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/WhileNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Alloca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Alloca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/BinaryOp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/BinaryOp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Branch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/IRType/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/IRType/Array.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/IRType/BuiltIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/IRType/BuiltIn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/IRType/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/IRType/Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/MemCopy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/MemCopy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Return.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Return.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Value/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Value/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Value/Immediate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Value/Immediate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Value/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Value/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -163,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="74" column="47" lean-forward="true" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+            <state relative-caret-position="432">
+              <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,13 +86,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IRPrinter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IRPrinter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="177">
               <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6522#6523#0" expanded="true" />
+                <element signature="e#6549#6550#0" expanded="true" />
+                <element signature="e#10448#10449#0" expanded="true" />
+                <element signature="e#10475#10476#0" expanded="true" />
+                <element signature="e#13774#13775#0" expanded="true" />
+                <element signature="e#13801#13802#0" expanded="true" />
+                <element signature="e#24009#24010#0" expanded="true" />
+                <element signature="e#24049#24050#0" expanded="true" />
+                <element signature="e#29099#29100#0" expanded="true" />
+                <element signature="e#29135#29136#0" expanded="true" />
+                <element signature="e#30396#30397#0" expanded="true" />
+                <element signature="e#30426#30427#0" expanded="true" />
+                <element signature="e#30466#30467#0" expanded="true" />
+                <element signature="e#30497#30498#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,18 +145,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="47" column="42" lean-forward="true" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Branch.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/Branch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -329,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/StringConstNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CreatorExprNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRPrinter.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/Return.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmInst.java" />
@@ -341,11 +253,12 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/Function.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/MemCopy.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/Store.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
@@ -536,7 +449,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="1" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -548,7 +461,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.34776536" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
@@ -837,24 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#13772#13773#0" expanded="true" />
-            <element signature="e#13799#13800#0" expanded="true" />
-            <element signature="e#29305#29306#0" expanded="true" />
-            <element signature="e#29341#29342#0" expanded="true" />
-            <element signature="e#30602#30603#0" expanded="true" />
-            <element signature="e#30632#30633#0" expanded="true" />
-            <element signature="e#30672#30673#0" expanded="true" />
-            <element signature="e#30703#30704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser/MxsParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -976,16 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="74" column="47" lean-forward="true" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="74">
@@ -998,8 +883,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="177">
           <caret line="53" column="9" lean-forward="true" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6522#6523#0" expanded="true" />
+            <element signature="e#6549#6550#0" expanded="true" />
+            <element signature="e#10448#10449#0" expanded="true" />
+            <element signature="e#10475#10476#0" expanded="true" />
+            <element signature="e#13774#13775#0" expanded="true" />
+            <element signature="e#13801#13802#0" expanded="true" />
+            <element signature="e#24009#24010#0" expanded="true" />
+            <element signature="e#24049#24050#0" expanded="true" />
+            <element signature="e#29099#29100#0" expanded="true" />
+            <element signature="e#29135#29136#0" expanded="true" />
+            <element signature="e#30396#30397#0" expanded="true" />
+            <element signature="e#30426#30427#0" expanded="true" />
+            <element signature="e#30466#30467#0" expanded="true" />
+            <element signature="e#30497#30498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
