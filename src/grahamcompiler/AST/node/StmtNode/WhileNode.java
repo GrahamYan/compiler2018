@@ -6,6 +6,7 @@ import grahamcompiler.utility.Scope;
 import grahamcompiler.utility.location;
 import grahamcompiler.IR.IRBase.IRTraversal;
 import grahamcompiler.IR.IRInstruction;
+import grahamcompiler.Type.ArrayType;
 
 public class WhileNode extends StmtNode{
     private ExprNode condition;

@@ -1,7 +1,8 @@
 package grahamcompiler.AST.node.StmtNode;
 
 import grahamcompiler.AST.tool.ASTVisitor;
-import grahamcompiler.utility.location;import grahamcompiler.IR.IRBase.IRTraversal;
+import grahamcompiler.utility.location;
+import grahamcompiler.IR.IRBase.IRTraversal;
 import grahamcompiler.IR.IRInstruction;
 
 public class BreakNode extends StmtNode{

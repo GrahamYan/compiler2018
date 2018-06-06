@@ -1,6 +1,9 @@
 package grahamcompiler.IR;
 
 import grahamcompiler.IR.IRBase.IRInstTraversal;
+import grahamcompiler.IR.Value.Register;
+
+import java.util.List;
 
 public class Jump extends Terminator{
     private Label target;
@@ -18,6 +21,14 @@ public class Jump extends Terminator{
     public String toString() {
         return "Jump: " + target.toString();
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() { }
 
     @Override
     public void accept(IRInstTraversal visitor) {

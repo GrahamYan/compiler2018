@@ -234,9 +234,9 @@ public class ASTBuilder extends MxsBaseListener{
     public void exitArrayNew(MxsParser.ArrayNewContext ctx) {
         Type type;
         if(ctx.classname() != null)
-            type = new Type(ctx.classname().ID().getText(), 1);
-        else type = new Type(ctx.basetype().getText(), 1);
-        List<ExprNode> exprs = new ArrayList<>();
+            type = (Type)map.get(ctx.classname());
+        else type = (Type)map.get(ctx.basetype());
+        List<ExprNode> exprs = new LinkedList<>();
         for(MxsParser.ExprContext item : ctx.expr())
             exprs.add((ExprNode)map.get(item));
         int dimension = getBracketNumber(ctx.getText());

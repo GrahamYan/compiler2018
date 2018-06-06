@@ -3,6 +3,10 @@ package grahamcompiler.IR;
 import grahamcompiler.IR.Value.*;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 public class BinaryOp extends IRInstruction {
     public enum BinOp {
         add, sub, imul, idiv, mod, sal, sar, and, or, xor, neg, not
@@ -70,7 +74,50 @@ public class BinaryOp extends IRInstruction {
 
     @Override
     public String toString() {
-        return dest.toString() + "=" + lhs.toString() + " " + op.toString() + " " + rhs.toString();
+        String tmp = dest.toString() + "=" + lhs.toString() + " " + op.toString();
+        if (rhs != null)
+             tmp += " " + rhs.toString();
+        return tmp;
+    }
+
+    @Override
+    public Register getDefRegister() {
+        Address tmp = dest;
+        if (tmp != null)
+            while (tmp.getBase() != null)
+                tmp = tmp.getBase();
+        return tmp;
+    }
+
+    @Override
+    public void setUsedRegister(){
+        usedRegister.clear();
+        Address tmp = dest;
+        while (tmp.getBase() != null) {
+            if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+            tmp = tmp.getBase();
+        }
+
+        if (lhs instanceof Address) {
+            tmp = (Address) lhs;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (lhs instanceof Register) usedRegister.add((Register) lhs);
+
+        if (rhs instanceof Address) {
+            tmp = (Address) rhs;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (rhs instanceof Register) usedRegister.add((Register) rhs);
+
     }
 
     @Override

@@ -5,6 +5,7 @@ import grahamcompiler.IR.Value.*;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
 
 import java.util.List;
+import java.util.LinkedList;
 
 public class Call extends IRInstruction {
     private Name functionName;
@@ -59,6 +60,37 @@ public class Call extends IRInstruction {
             tmp += dest.toString() + " = ";
         tmp += "Call @" + functionName.toString() + paramToString();
         return tmp;
+    }
+
+    @Override
+    public Register getDefRegister() {
+        Address tmp = dest;
+        if (tmp != null)
+            while (tmp.getBase() != null)
+                tmp = tmp.getBase();
+        return tmp;
+    }
+
+    @Override
+    public void setUsedRegister() {
+        usedRegister.clear();
+        Address tmp = dest;
+        if (tmp != null)
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+
+        for (IntegerValue item : params)
+            if (item instanceof Address) {
+                tmp = (Address) item;
+                while (tmp.getBase() != null) {
+                    if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                    tmp = tmp.getBase();
+                }
+                usedRegister.add(tmp);
+            }
+            else if (item instanceof Register) usedRegister.add((Register) item);
     }
 
     @Override

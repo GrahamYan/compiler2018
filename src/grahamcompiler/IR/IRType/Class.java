@@ -27,6 +27,7 @@ public class Class extends IRType {
                 tmp += item.toString() + " ";
             else
                 tmp += item.toString() + "}";
+            i++;
         }
         return tmp;
     }

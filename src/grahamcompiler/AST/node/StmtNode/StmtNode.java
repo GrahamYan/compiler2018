@@ -15,7 +15,6 @@ public abstract class StmtNode extends ASTNode{
     }
     @Override
     public IRInstruction accept(IRTraversal visitor) {
-        visitor.visit(this);
         return null;
     }
 }

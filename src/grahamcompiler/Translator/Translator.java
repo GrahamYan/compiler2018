@@ -14,7 +14,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-
 public class Translator implements IRInstTraversal {
     private static final int ARGUMENT = 6;
     private boolean isInitialzeInst = false;
@@ -132,6 +131,7 @@ public class Translator implements IRInstTraversal {
     @Override
     public void visit(BinaryOp inst) {
         if (inst.getOp() == BinaryOp.BinOp.idiv || inst.getOp() == BinaryOp.BinOp.mod) {
+            System.out.print(inst);
             visitDivBinaryOp(inst);
             return;
         }
@@ -355,6 +355,7 @@ public class Translator implements IRInstTraversal {
     }
 
     private void visitDivBinaryOp(BinaryOp inst) {
+        System.out.print(inst.getLhsReg());
         if(inst.getLhs() instanceof Immediate)
             addInst(NasmInst.Instruction.mov, inst.getLhsReg().toString(), String.valueOf(((Immediate) inst.getLhs()).getValue()));
         else

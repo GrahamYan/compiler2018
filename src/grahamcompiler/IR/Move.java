@@ -3,6 +3,8 @@ package grahamcompiler.IR;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
 import grahamcompiler.IR.Value.Register;
 
+import java.util.List;
+
 public class Move extends IRInstruction{
     private Register dest;
     private Register data;
@@ -17,6 +19,14 @@ public class Move extends IRInstruction{
     public String toString() {
         return dest.toString() + " = Move " + data.toString();
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() { }
 
     @Override
     public void accept(IRInstTraversal visitor) {

@@ -2,6 +2,9 @@ package grahamcompiler.IR;
 
 import grahamcompiler.IR.IRBase.*;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
+import grahamcompiler.IR.Value.Register;
+
+import java.util.List;
 
 public class Label extends IRInstruction{
     private BasicBlock block;
@@ -29,6 +32,14 @@ public class Label extends IRInstruction{
     public String toString() {
         return "Label_ " + name;
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() { }
 
     @Override
     public void accept(IRInstTraversal visitor) {

@@ -4,6 +4,10 @@ import grahamcompiler.IR.IRBase.IRInstTraversal;
 import grahamcompiler.IR.Value.Address;
 import grahamcompiler.IR.Value.IntegerValue;
 import grahamcompiler.IR.Value.PhysicalRegister;
+import grahamcompiler.IR.Value.Register;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class Malloc extends IRInstruction{
     private IntegerValue size;
@@ -44,6 +48,35 @@ public class Malloc extends IRInstruction{
     @Override
     public void accept(IRInstTraversal visitor) {
         visitor.visit(this);
+    }
+
+    @Override
+    public Register getDefRegister() {
+        Address tmp = returnAddress;
+        if (tmp != null)
+            while (tmp.getBase() != null)
+                tmp = tmp.getBase();
+        return tmp;
+    }
+
+    @Override
+    public void setUsedRegister() {
+        usedRegister.clear();
+        Address tmp = returnAddress;
+        while (tmp.getBase() != null) {
+            if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+            tmp = tmp.getBase();
+        }
+
+        if (size instanceof Address) {
+            tmp = (Address) size;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (size instanceof Register) usedRegister.add((Register) size);
     }
 
     @Override

@@ -4,6 +4,9 @@ import grahamcompiler.AST.node.ExprNode.MemberExprNode;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
 import grahamcompiler.IR.Value.Address;
 import grahamcompiler.IR.Value.PhysicalRegister;
+import grahamcompiler.IR.Value.Register;
+
+import java.util.List;
 
 public class MemCopy extends IRInstruction{
     private Address fromAddress;
@@ -42,6 +45,25 @@ public class MemCopy extends IRInstruction{
         else
             return "MemCopy: NULL to NULL";
     }
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() {
+        usedRegister.clear();
+        Address tmp;
+        if (fromAddress instanceof Address) {
+            tmp = (Address) fromAddress;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (fromAddress instanceof Register) usedRegister.add((Register) fromAddress);
+    }
+
     @Override
     public void accept(IRInstTraversal visitor) {
         visitor.visit(this);

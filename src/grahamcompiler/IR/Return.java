@@ -1,8 +1,12 @@
 package grahamcompiler.IR;
 
 import grahamcompiler.IR.IRBase.IRInstTraversal;
+import grahamcompiler.IR.Value.Address;
 import grahamcompiler.IR.Value.IntegerValue;
 import grahamcompiler.IR.Value.PhysicalRegister;
+import grahamcompiler.IR.Value.Register;
+
+import java.util.List;
 
 public class Return extends Terminator{
     private IntegerValue value;
@@ -36,6 +40,26 @@ public class Return extends Terminator{
             return "Return";
         else
             return "Return: " + value.toString();
+    }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() {
+        usedRegister.clear();
+        Address tmp;
+        if (value instanceof Address) {
+            tmp = (Address) value;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (value instanceof Register) usedRegister.add((Register) value);
     }
 
     @Override

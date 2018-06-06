@@ -28,10 +28,18 @@ public class Alloca extends IRInstruction {
     @Override
     public String toString() {
         if (this.size != null)
-            return dest.toString() + "= alloca" + size.toString();
+            return dest.toString() + "= alloca " + size.toString();
         else
-            return dest.toString() + "= alloca" + type.toString();
+            return dest.toString() + "= alloca " + type.toString();
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() {}
 
     @Override
     public void accept(IRInstTraversal visitor)

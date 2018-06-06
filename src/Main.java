@@ -15,6 +15,7 @@ import grahamcompiler.IR.IRType.Class;
 import grahamcompiler.Translator.NasmPrinter;
 import grahamcompiler.Translator.Translator;
 import grahamcompiler.utility.*;
+import grahamcompiler.Optimizer.*;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -81,6 +82,11 @@ public class Main {
         irPrinter.printIR();
     }
 
+    public static void optimizeIR(IRGenerator irGenerator) {
+        Allocator allocator = new Allocator(irGenerator.getEntry(), irGenerator.getInitializeEntry());
+        allocator.process();
+    }
+
     public static void main(String[] args) throws Exception {
         //     InputStream is = System.in;
         //InputStream is = new FileInputStream("Test/TestSemantic/text.txt");
@@ -91,6 +97,7 @@ public class Main {
         checkSemantic(program);
         IRGenerator irGenerator = generateIR(program);
         //printIR(irGenerator);
+        optimizeIR(irGenerator);
         translate(irGenerator,out);
     }
 

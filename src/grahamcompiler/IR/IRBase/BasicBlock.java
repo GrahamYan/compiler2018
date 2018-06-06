@@ -17,8 +17,8 @@ public class BasicBlock {
     private IRInstruction tail;
     private BlockType blocktype;
     private List<IRInstruction> instructions;
-    private Set<BasicBlock> succ = new HashSet<>();
-    private Set<BasicBlock> prev = new HashSet<>();
+    private Set<BasicBlock> succs = new HashSet<>();
+    private Set<BasicBlock> prevs = new HashSet<>();
 
     public BasicBlock() {
         instructions = new ArrayList<>();
@@ -69,7 +69,7 @@ public class BasicBlock {
         this.instructions.add(inst);
     }
 
-    public void addSucc(BasicBlock succ) {this.succ.add(succ);}
+    public void addSucc(BasicBlock succ) {this.succs.add(succ);}
 
-    public void addPrec(BasicBlock prev) {this.prev.add(prev);}
+    public void addPrec(BasicBlock prev) {this.prevs.add(prev);}
 }

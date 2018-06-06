@@ -5,6 +5,7 @@ import grahamcompiler.utility.Name;
 import grahamcompiler.IR.IRBase.BasicBlock;
 import grahamcompiler.IR.IRType.*;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
+import grahamcompiler.IR.Value.Register;
 
 import java.util.List;
 
@@ -58,6 +59,15 @@ public class Function extends IRInstruction {
     public String toString() {
         return "define " + retType.toString() + " @" + name.toString() + paramToString();
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() { }
+
 
     @Override
     public void accept(IRInstTraversal visitor) {

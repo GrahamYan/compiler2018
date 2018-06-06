@@ -20,7 +20,7 @@ import grahamcompiler.IR.Label;
 import grahamcompiler.utility.Scope;
 import grahamcompiler.utility.UnaryOp;
 
-//import grahamcompiler.Translator.NasmInst;
+import grahamcompiler.Translator.NasmInst;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,13 @@
 package grahamcompiler.IR;
 
 import grahamcompiler.IR.IRBase.IRInstTraversal;
+import grahamcompiler.IR.Value.Address;
 import grahamcompiler.IR.Value.IntegerValue;
 import grahamcompiler.IR.Value.PhysicalRegister;
+import grahamcompiler.IR.Value.Register;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class Store extends IRInstruction{
     private IntegerValue address;
@@ -35,7 +40,30 @@ public class Store extends IRInstruction{
 
     @Override
     public String toString() {
-        return "Store " + data.toString() + " to " + address.toString();
+        if (data == null) return "Store NULL to" + address.toString();
+        else if (address == null) return "Store " + data.toString() + " to NULL";
+        else return "Store " + data.toString() + " to " + address.toString();
+
+    }
+
+    @Override
+    public Register getDefRegister() {
+        return (Register) address;
+    }
+
+    @Override
+    public void setUsedRegister() {
+        usedRegister.clear();
+        Address tmp;
+        if (data instanceof Address) {
+            tmp = (Address) data;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (data instanceof Register) usedRegister.add((Register) data);
     }
 
     @Override

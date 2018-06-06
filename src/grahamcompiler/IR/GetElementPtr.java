@@ -4,7 +4,10 @@ import grahamcompiler.IR.IRBase.IRInstTraversal;
 import grahamcompiler.IR.IRType.IRType;
 import grahamcompiler.IR.Value.Address;
 import grahamcompiler.IR.Value.IntegerValue;
+import grahamcompiler.IR.Value.Register;
 import grahamcompiler.IR.Value.VirtualRegister;
+
+import java.util.List;
 
 public class GetElementPtr extends IRInstruction
 {
@@ -31,6 +34,14 @@ public class GetElementPtr extends IRInstruction
                 type.toString() + " % " + baseAddress.toString() + " " +
                 String.valueOf(pos1) + " " + String.valueOf(pos2);
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() { }
 
     @Override
     public void accept(IRInstTraversal visitor)

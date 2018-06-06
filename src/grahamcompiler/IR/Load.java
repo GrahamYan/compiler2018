@@ -1,10 +1,9 @@
 package grahamcompiler.IR;
 
 import grahamcompiler.IR.IRBase.IRInstTraversal;
-import grahamcompiler.IR.Value.Address;
-import grahamcompiler.IR.Value.Immediate;
-import grahamcompiler.IR.Value.PhysicalRegister;
-import grahamcompiler.IR.Value.VirtualRegister;
+import grahamcompiler.IR.Value.*;
+
+import java.util.List;
 
 public class Load extends IRInstruction {
     private VirtualRegister dest;
@@ -59,6 +58,14 @@ public class Load extends IRInstruction {
             return dest.toString() + " = Load " + address.toString();
         else return dest.toString() + " = Load " + value.toString();
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() { }
 
     @Override
     public void accept(IRInstTraversal visitor) {

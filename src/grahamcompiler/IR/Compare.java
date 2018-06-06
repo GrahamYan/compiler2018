@@ -3,6 +3,9 @@ package grahamcompiler.IR;
 import grahamcompiler.IR.Value.*;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Compare extends IRInstruction{
     public enum Condition {
         SLT, SGT, SEQ, BEQ, EQU, NEQ;
@@ -65,7 +68,55 @@ public class Compare extends IRInstruction{
 
     @Override
     public String toString() {
-        return dest.toString() + "=" + lhs.toString() + " " + condition.toString() + " " + rhs.toString();
+        String ret = "";
+        if(dest != null)
+            ret += dest.toString() + " = ";
+        if(lhs != null)
+            ret += lhs.toString() + " ";
+        ret += condition.toString() + " ";
+        if(rhs != null)
+            ret += rhs.toString();
+        return ret;
+        //return dest.toString() + "=" + lhs.toString() + " " + condition.toString() + " " + rhs.toString();
+    }
+
+    @Override
+    public Register getDefRegister() {
+        Address tmp = dest;
+        if (tmp != null)
+            while (tmp.getBase() != null)
+                tmp = tmp.getBase();
+        return tmp;
+    }
+
+    @Override
+    public void setUsedRegister() {
+        usedRegister.clear();
+        Address tmp = dest;
+        while (tmp.getBase() != null) {
+            if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+            tmp = tmp.getBase();
+        }
+
+        if (lhs instanceof Address) {
+            tmp = (Address) lhs;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (lhs instanceof Register) usedRegister.add((Register) lhs);
+
+        if (rhs instanceof Address) {
+            tmp = (Address) rhs;
+            while (tmp.getBase() != null) {
+                if (tmp.getOffset() instanceof Register) usedRegister.add((Register) tmp.getOffset());
+                tmp = tmp.getBase();
+            }
+            usedRegister.add(tmp);
+        }
+        else if (rhs instanceof Register) usedRegister.add((Register) rhs);
     }
 
     @Override

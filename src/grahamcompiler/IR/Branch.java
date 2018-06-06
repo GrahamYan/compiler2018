@@ -3,6 +3,8 @@ package grahamcompiler.IR;
 import grahamcompiler.IR.Value.*;
 import grahamcompiler.IR.IRBase.IRInstTraversal;
 
+import java.util.List;
+
 public class Branch extends Terminator {
     private Label ifTrue;
     private Label ifFalse;
@@ -57,6 +59,14 @@ public class Branch extends Terminator {
         tmp += " true: " + ifTrue.toString() + " false " + ifFalse.toString();
         return tmp;
     }
+
+    @Override
+    public Register getDefRegister() {
+        return null;
+    }
+
+    @Override
+    public void setUsedRegister() { }
 
     @Override
     public void accept(IRInstTraversal visitor) {
