@@ -2,7 +2,7 @@ package grahamcompiler.IR.Value;
 
 import grahamcompiler.utility.Name;
 
-public class Register extends IntergerValue {
+public class Register extends IntegerValue {
     private Name name;
 
     public Register (Name name) {this.name = name;}

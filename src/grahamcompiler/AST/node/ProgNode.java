@@ -4,6 +4,7 @@ import grahamcompiler.AST.node.DeclNode.DeclNode;
 import grahamcompiler.utility.location;
 import grahamcompiler.AST.tool.ASTVisitor;
 import grahamcompiler.utility.Scope;
+import grahamcompiler.IR.IRBase.IRTraversal;
 
 import java.util.List;
 
@@ -35,5 +36,10 @@ public class ProgNode extends ASTNode {
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
+    }
+    @Override
+    public Object accept(IRTraversal visitor) {
+        visitor.visit(this);
+        return null;
     }
 }

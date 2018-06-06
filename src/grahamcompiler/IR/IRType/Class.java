@@ -5,7 +5,7 @@ import grahamcompiler.utility.Name;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Class {
+public class Class extends IRType {
     private List<IRType> contains;
     private Name name;
 

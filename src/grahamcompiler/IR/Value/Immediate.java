@@ -1,6 +1,6 @@
 package grahamcompiler.IR.Value;
 
-public class Immediate extends IntergerValue {
+public class Immediate extends IntegerValue {
     private int value;
 
     public Immediate(int value) {this.value = value;}

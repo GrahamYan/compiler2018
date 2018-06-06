@@ -31,6 +31,8 @@ public class Store extends IRInstruction{
         this.dataReg = dataReg;
     }
 
+    public IntegerValue getAddress() {return address;}
+
     @Override
     public String toString() {
         return "Store " + data.toString() + " to " + address.toString();

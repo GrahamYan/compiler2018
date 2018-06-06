@@ -1,19 +1,12 @@
 ProgNode
+  *VariableDeclaration: x
+    BuiltInType: int
+    IntConstNode  value = 10
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: a
-        BuiltInType: int
-        IntConstNode  value = 1
-      *VariableDeclaration: b
-        BuiltInType: int
-        IntConstNode  value = 2
-      *VariableDeclaration: c
-        BuiltInType: int
       ExprStmtNode
         AssignExprNode
-          IdentifierExprNode  ID name: c
-          BinaryExprNode  Op: ADD
-            IdentifierExprNode  ID name: a
-            IdentifierExprNode  ID name: b
+          IdentifierExprNode  ID name: x
+          IntConstNode  value = 20
       ReturnNode

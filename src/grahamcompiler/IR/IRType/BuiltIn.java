@@ -1,6 +1,6 @@
 package grahamcompiler.IR.IRType;
 
-public class BuiltIn {
+public class BuiltIn extends IRType {
     @Override
     public String toString() {return "i64";}
 }

@@ -7,6 +7,9 @@ import grahamcompiler.utility.location;
 import grahamcompiler.utility.Name;
 import grahamcompiler.Type.*;
 import grahamcompiler.utility.Scope;
+import grahamcompiler.IR.IRBase.BasicBlock;
+import grahamcompiler.IR.Function;
+import grahamcompiler.IR.IRBase.IRTraversal;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -15,6 +18,14 @@ public class FuncDeclNode extends DeclNode {
     private FuncDeclObject function;
     private BlockNode block;
     private Scope externalScope, internalScope;
+    private ClassDeclNode classDeclNode;
+
+    public FuncDeclNode(boolean isBuiltIn, location pos, FuncDeclObject func, BlockNode blo) {
+        super(pos, isBuiltIn);
+        function = func;
+        block = blo;
+        setIsFunction(true);
+    }
 
     public FuncDeclNode(location pos, FuncDeclObject func, BlockNode blo) {
         super(pos);
@@ -26,6 +37,8 @@ public class FuncDeclNode extends DeclNode {
     public FuncDeclNode(String name) {
         super(new location(0,0));
         function = new FuncDeclObject(name, new ArrayList<>(), new BuiltInType("int", 4));
+        block = null;
+        setIsFunction(true);
     }
 
     public FuncDeclObject getFunction() {
@@ -68,6 +81,14 @@ public class FuncDeclNode extends DeclNode {
         this.internalScope = internalScope;
     }
 
+    public ClassDeclNode getClassDeclNode() {
+        return classDeclNode;
+    }
+
+    public void setClassDeclNode(ClassDeclNode classDeclNode) {
+        this.classDeclNode = classDeclNode;
+    }
+
     @Override
     public Name getName()
     {
@@ -77,5 +98,11 @@ public class FuncDeclNode extends DeclNode {
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
+    }
+
+    @Override
+    public Function accept(IRTraversal visitor)
+    {
+        return visitor.visit(this);
     }
 }

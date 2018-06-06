@@ -21,6 +21,10 @@ public class Alloca extends IRInstruction {
         this.type = type;
     }
 
+    public Address getDest() {
+        return dest;
+    }
+
     @Override
     public String toString() {
         if (this.size != null)

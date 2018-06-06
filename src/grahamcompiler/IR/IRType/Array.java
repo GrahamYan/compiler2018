@@ -2,11 +2,11 @@ package grahamcompiler.IR.IRType;
 
 import grahamcompiler.IR.Value.*;
 
-public class Array {
+public class Array extends IRType {
     private IRType type;
-    private IntergerValue size;
+    private IntegerValue size;
 
-    public Array(IRType type, IntergerValue size) {
+    public Array(IRType type, IntegerValue size) {
         this.type = type;
         this.size = size;
     }

@@ -3,6 +3,8 @@ package grahamcompiler.AST.node.ExprNode;
 import grahamcompiler.AST.tool.ASTVisitor;
 import grahamcompiler.Type.Type;
 import grahamcompiler.utility.location;
+import grahamcompiler.IR.IRBase.IRTraversal;
+import grahamcompiler.IR.Value.IntegerValue;
 
 import java.util.List;
 
@@ -30,8 +32,16 @@ public class CreatorExprNode extends ExprNode{
     public Type getType() {
         return type;
     }
+    public List<ExprNode> getExpresses() {
+        return expresses;
+    }
+
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
+    }
+    @Override
+    public IntegerValue accept(IRTraversal visitor) {
+        return visitor.visit(this);
     }
 }

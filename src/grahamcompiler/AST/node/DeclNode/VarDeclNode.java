@@ -7,15 +7,22 @@ import grahamcompiler.AST.node.ExprNode.ExprNode;
 import grahamcompiler.AST.object.VarObject;
 import grahamcompiler.utility.Name;
 import grahamcompiler.utility.Scope;
+import grahamcompiler.IR.IRBase.IRTraversal;
+import grahamcompiler.IR.Value.Address;
 
 public class VarDeclNode extends DeclNode{
     private VarObject var;
-    ExprNode value;
+    private ExprNode value;
+    private boolean isMember;
+    private int memberNum;
+
 
     public VarDeclNode(location pos, VarObject va, ExprNode val) {
         super(pos);
         var = va;
         value = val;
+        this.isMember = false;
+        this.memberNum = 0;
     }
 
     public final VarObject getVar() {
@@ -43,6 +50,22 @@ public class VarDeclNode extends DeclNode{
         return var.getType();
     }
 
+    public boolean isMember() {
+        return isMember;
+    }
+
+    public int getMemberNum() {
+        return memberNum;
+    }
+
+    public void setMember(boolean member) {
+        isMember = member;
+    }
+
+    public void setMemberNum(int memberNum) {
+        this.memberNum = memberNum;
+    }
+
     @Override
     public Name getName()
     {
@@ -52,5 +75,10 @@ public class VarDeclNode extends DeclNode{
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
+    }
+
+    @Override
+    public Address accept(IRTraversal visitor) {
+        return visitor.visit(this);
     }
 }

@@ -5,7 +5,7 @@ import grahamcompiler.IR.IRBase.IRInstTraversal;
 
 public class BinaryOp extends IRInstruction {
     public enum BinOp {
-        add, sub, imul, idiv, mod, shl, shr, and, or, xor, neg, not
+        add, sub, imul, idiv, mod, sal, sar, and, or, xor, neg, not
     }
 
     private BinOp op;

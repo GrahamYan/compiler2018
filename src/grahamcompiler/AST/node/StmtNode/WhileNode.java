@@ -4,6 +4,8 @@ import grahamcompiler.AST.node.ExprNode.ExprNode;
 import grahamcompiler.AST.tool.ASTVisitor;
 import grahamcompiler.utility.Scope;
 import grahamcompiler.utility.location;
+import grahamcompiler.IR.IRBase.IRTraversal;
+import grahamcompiler.IR.IRInstruction;
 
 public class WhileNode extends StmtNode{
     private ExprNode condition;
@@ -35,5 +37,10 @@ public class WhileNode extends StmtNode{
     @Override
     public void accept(ASTVisitor visitor) {
         visitor.visit(this);
+    }
+    @Override
+    public IRInstruction accept(IRTraversal visitor) {
+        visitor.visit(this);
+        return null;
     }
 }

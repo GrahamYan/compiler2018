@@ -1,18 +1,10 @@
 package grahamcompiler.AST.node.ExprNode;
 
-import jdk.nashorn.internal.codegen.CompilerConstants;
-
 import grahamcompiler.AST.node.ASTNode;
-import grahamcompiler.AST.tool.ASTVisitor;
-import grahamcompiler.utility.BinaryOp;
-import grahamcompiler.utility.Name;
 import grahamcompiler.utility.location;
-import grahamcompiler.utility.UnaryOp;
 import grahamcompiler.Type.Type;
-import grahamcompiler.Type.BuiltInType;
-import grahamcompiler.Type.Type;
-
-import java.util.List;
+import grahamcompiler.IR.IRBase.IRTraversal;
+import grahamcompiler.IR.Value.IntegerValue;
 
 public abstract class ExprNode extends ASTNode{
     private boolean isLeftvalue;
@@ -32,6 +24,10 @@ public abstract class ExprNode extends ASTNode{
     }
     public Type getExprType() {
         return exprType;
+    }
+    @Override
+    public IntegerValue accept(IRTraversal visitor) {
+        return visitor.visit(this);
     }
 }
 
