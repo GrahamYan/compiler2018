@@ -11,144 +11,144 @@ define i64 @main()
    [d]= alloca i64
    [%r0]= alloca i64
    [%r0] = [b] NEQ Immediate:0
-   Branch: [%r0] true: Label_ 4 false Label_ 5
+   Branch: [%r0] true: Label_4 false Label_5
 
---Label_ 4
+--Label_4
    Store Immediate:1 to [%r0]
-   Jump: Label_ 6
+   Jump: Label_6
 
---Label_ 5
+--Label_5
    Store Immediate:0 to [%r0]
 
---Label_ 6
+--Label_6
    [%r1] = [%r0] NEQ Immediate:0
-   Branch: [%r0] true: Label_ 0 false Label_ 2
+   Branch: [%r0] true: Label_0 false Label_2
 
---Label_ 0
+--Label_0
    [%r2]= alloca i64
    [%r2]=[a] idiv [b]
    [%r3]= alloca i64
    [%r3] = [%r2] NEQ Immediate:1
-   Branch: [%r3] true: Label_ 7 false Label_ 8
+   Branch: [%r3] true: Label_7 false Label_8
 
---Label_ 7
+--Label_7
    Store Immediate:1 to [%r3]
-   Jump: Label_ 9
+   Jump: Label_9
 
---Label_ 8
+--Label_8
    Store Immediate:0 to [%r3]
 
---Label_ 9
+--Label_9
    [%r4]= alloca i64
    [%r4] = [%r3] NEQ Immediate:0
-   Branch: [%r4] true: Label_ 1 false Label_ 2
+   Branch: [%r4] true: Label_1 false Label_2
 
---Label_ 1
+--Label_1
    Store Immediate:1 to [%r4]
-   Jump: Label_ 3
+   Jump: Label_3
 
---Label_ 2
+--Label_2
    Store Immediate:0 to [%r4]
 
---Label_ 3
+--Label_3
    Store [%r4] to [d]
    [%r5] = [d] EQU Immediate:1
-   Branch: [%r5] true: Label_ 10 false Label_ 11
+   Branch: [%r5] true: Label_10 false Label_11
 
---Label_ 10
+--Label_10
    Store Immediate:10 to [c]
-   Jump: Label_ 12
+   Jump: Label_12
 
---Label_ 11
+--Label_11
    Store Immediate:20 to [c]
-   Jump: Label_ 12
+   Jump: Label_12
 
---Label_ 12
+--Label_12
    [e]= alloca i64
    [%r6]= alloca i64
    [%r6] = [c] EQU Immediate:10
-   Branch: [%r6] true: Label_ 21 false Label_ 22
+   Branch: [%r6] true: Label_21 false Label_22
 
---Label_ 21
+--Label_21
    Store Immediate:1 to [%r6]
-   Jump: Label_ 23
+   Jump: Label_23
 
---Label_ 22
+--Label_22
    Store Immediate:0 to [%r6]
 
---Label_ 23
+--Label_23
    [%r7] = [%r6] NEQ Immediate:0
-   Branch: [%r6] true: Label_ 17 false Label_ 19
+   Branch: [%r6] true: Label_17 false Label_19
 
---Label_ 17
+--Label_17
    [%r8]= alloca i64
    [%r8]=[a] idiv [b]
    [%r9]= alloca i64
    [%r9] = [%r8] EQU Immediate:0
-   Branch: [%r9] true: Label_ 24 false Label_ 25
+   Branch: [%r9] true: Label_24 false Label_25
 
---Label_ 24
+--Label_24
    Store Immediate:1 to [%r9]
-   Jump: Label_ 26
+   Jump: Label_26
 
---Label_ 25
+--Label_25
    Store Immediate:0 to [%r9]
 
---Label_ 26
+--Label_26
    [%r10]= alloca i64
    [%r10] = [%r9] NEQ Immediate:0
-   Branch: [%r10] true: Label_ 18 false Label_ 19
+   Branch: [%r10] true: Label_18 false Label_19
 
---Label_ 18
+--Label_18
    Store Immediate:1 to [%r10]
-   Jump: Label_ 20
+   Jump: Label_20
 
---Label_ 19
+--Label_19
    Store Immediate:0 to [%r10]
 
---Label_ 20
+--Label_20
    [%r11] = [%r10] NEQ Immediate:0
-   Branch: [%r10] true: Label_ 13 false Label_ 15
+   Branch: [%r10] true: Label_13 false Label_15
 
---Label_ 13
+--Label_13
    [%r12]= alloca i64
    [%r12] = [a] EQU Immediate:5
-   Branch: [%r12] true: Label_ 27 false Label_ 28
+   Branch: [%r12] true: Label_27 false Label_28
 
---Label_ 27
+--Label_27
    Store Immediate:1 to [%r12]
-   Jump: Label_ 29
+   Jump: Label_29
 
---Label_ 28
+--Label_28
    Store Immediate:0 to [%r12]
 
---Label_ 29
+--Label_29
    [%r13]= alloca i64
    [%r13] = [%r12] NEQ Immediate:0
-   Branch: [%r13] true: Label_ 14 false Label_ 15
+   Branch: [%r13] true: Label_14 false Label_15
 
---Label_ 14
+--Label_14
    Store Immediate:1 to [%r13]
-   Jump: Label_ 16
+   Jump: Label_16
 
---Label_ 15
+--Label_15
    Store Immediate:0 to [%r13]
 
---Label_ 16
+--Label_16
    [%r14]= alloca i64
    [%r14]=[%r14] xor Immediate:1
    Store [%r14] to [e]
    [%r15] = [e] EQU Immediate:1
-   Branch: [%r15] true: Label_ 30 false Label_ 31
+   Branch: [%r15] true: Label_30 false Label_31
 
---Label_ 30
+--Label_30
    Store Immediate:30 to [c]
-   Jump: Label_ 32
+   Jump: Label_32
 
---Label_ 31
-   Jump: Label_ 32
+--Label_31
+   Jump: Label_32
 
---Label_ 32
+--Label_32
    Return: [c]
    Return
 

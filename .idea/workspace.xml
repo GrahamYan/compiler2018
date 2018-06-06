@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/IRtest_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/IRtest_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/IR/Label.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/IR/Label.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/Label.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -99,7 +98,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="327">
               <caret line="98" column="10" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -111,8 +110,8 @@
       <file leaf-file-name="Label.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/Label.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="444">
+              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -504,12 +503,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19378883" side_tool="true" weight="0.32960895" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.8062112" visible="true" weight="0.11592179" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.8062112" visible="true" weight="0.20949721" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2398957" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2398957" />
       <window_info anchor="bottom" id="ANTLR Preview" order="12" weight="0.14088398" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1032,8 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/Label.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="444">
+          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1042,7 +1041,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
+        <state relative-caret-position="327">
           <caret line="98" column="10" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
