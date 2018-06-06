@@ -8,143 +8,147 @@ define i64 @main()
    [b]= alloca i64
    Store Immediate:0 to [b]
    [c]= alloca i64
+   [d]= alloca i64
    [%r0]= alloca i64
    [%r0] = [b] NEQ Immediate:0
-   Branch: [%r0] true: Label_ 7 false Label_ 8
+   Branch: [%r0] true: Label_ 4 false Label_ 5
 
---Label_ 7
+--Label_ 4
    Store Immediate:1 to [%r0]
-   Jump: Label_ 9
+   Jump: Label_ 6
 
---Label_ 8
+--Label_ 5
    Store Immediate:0 to [%r0]
 
---Label_ 9
+--Label_ 6
    [%r1] = [%r0] NEQ Immediate:0
-   Branch: [%r0] true: Label_ 3 false Label_ 5
+   Branch: [%r0] true: Label_ 0 false Label_ 2
 
---Label_ 3
+--Label_ 0
    [%r2]= alloca i64
    [%r2]=[a] idiv [b]
    [%r3]= alloca i64
    [%r3] = [%r2] NEQ Immediate:1
-   Branch: [%r3] true: Label_ 10 false Label_ 11
+   Branch: [%r3] true: Label_ 7 false Label_ 8
+
+--Label_ 7
+   Store Immediate:1 to [%r3]
+   Jump: Label_ 9
+
+--Label_ 8
+   Store Immediate:0 to [%r3]
+
+--Label_ 9
+   [%r4]= alloca i64
+   [%r4] = [%r3] NEQ Immediate:0
+   Branch: [%r4] true: Label_ 1 false Label_ 2
+
+--Label_ 1
+   Store Immediate:1 to [%r4]
+   Jump: Label_ 3
+
+--Label_ 2
+   Store Immediate:0 to [%r4]
+
+--Label_ 3
+   Store [%r4] to [d]
+   [%r5] = [d] EQU Immediate:1
+   Branch: [%r5] true: Label_ 10 false Label_ 11
 
 --Label_ 10
-   Store Immediate:1 to [%r3]
+   Store Immediate:10 to [c]
    Jump: Label_ 12
 
 --Label_ 11
-   Store Immediate:0 to [%r3]
+   Store Immediate:20 to [c]
+   Jump: Label_ 12
 
 --Label_ 12
-   [%r4]= alloca i64
-   [%r4] = [%r3] NEQ Immediate:0
-   Branch: [%r4] true: Label_ 4 false Label_ 5
-
---Label_ 4
-   Store Immediate:1 to [%r4]
-   Jump: Label_ 6
-
---Label_ 5
-   Store Immediate:0 to [%r4]
-
---Label_ 6
-   [%r5] = [%r4] EQU Immediate:1
-   Branch: [%r5] true: Label_ 0 false Label_ 1
-
---Label_ 0
-   Store Immediate:10 to [c]
-   Jump: Label_ 2
-
---Label_ 1
-   Store Immediate:20 to [c]
-   Jump: Label_ 2
-
---Label_ 2
+   [e]= alloca i64
    [%r6]= alloca i64
    [%r6] = [c] EQU Immediate:10
-   Branch: [%r6] true: Label_ 24 false Label_ 25
+   Branch: [%r6] true: Label_ 21 false Label_ 22
 
---Label_ 24
+--Label_ 21
    Store Immediate:1 to [%r6]
-   Jump: Label_ 26
+   Jump: Label_ 23
 
---Label_ 25
+--Label_ 22
    Store Immediate:0 to [%r6]
 
---Label_ 26
+--Label_ 23
    [%r7] = [%r6] NEQ Immediate:0
-   Branch: [%r6] true: Label_ 20 false Label_ 22
+   Branch: [%r6] true: Label_ 17 false Label_ 19
 
---Label_ 20
+--Label_ 17
    [%r8]= alloca i64
    [%r8]=[a] idiv [b]
    [%r9]= alloca i64
    [%r9] = [%r8] EQU Immediate:0
-   Branch: [%r9] true: Label_ 27 false Label_ 28
+   Branch: [%r9] true: Label_ 24 false Label_ 25
+
+--Label_ 24
+   Store Immediate:1 to [%r9]
+   Jump: Label_ 26
+
+--Label_ 25
+   Store Immediate:0 to [%r9]
+
+--Label_ 26
+   [%r10]= alloca i64
+   [%r10] = [%r9] NEQ Immediate:0
+   Branch: [%r10] true: Label_ 18 false Label_ 19
+
+--Label_ 18
+   Store Immediate:1 to [%r10]
+   Jump: Label_ 20
+
+--Label_ 19
+   Store Immediate:0 to [%r10]
+
+--Label_ 20
+   [%r11] = [%r10] NEQ Immediate:0
+   Branch: [%r10] true: Label_ 13 false Label_ 15
+
+--Label_ 13
+   [%r12]= alloca i64
+   [%r12] = [a] EQU Immediate:5
+   Branch: [%r12] true: Label_ 27 false Label_ 28
 
 --Label_ 27
-   Store Immediate:1 to [%r9]
+   Store Immediate:1 to [%r12]
    Jump: Label_ 29
 
 --Label_ 28
-   Store Immediate:0 to [%r9]
+   Store Immediate:0 to [%r12]
 
 --Label_ 29
-   [%r10]= alloca i64
-   [%r10] = [%r9] NEQ Immediate:0
-   Branch: [%r10] true: Label_ 21 false Label_ 22
+   [%r13]= alloca i64
+   [%r13] = [%r12] NEQ Immediate:0
+   Branch: [%r13] true: Label_ 14 false Label_ 15
 
---Label_ 21
-   Store Immediate:1 to [%r10]
-   Jump: Label_ 23
+--Label_ 14
+   Store Immediate:1 to [%r13]
+   Jump: Label_ 16
 
---Label_ 22
-   Store Immediate:0 to [%r10]
-
---Label_ 23
-   [%r11] = [%r10] NEQ Immediate:0
-   Branch: [%r10] true: Label_ 16 false Label_ 18
+--Label_ 15
+   Store Immediate:0 to [%r13]
 
 --Label_ 16
-   [%r12]= alloca i64
-   [%r12] = [a] EQU Immediate:5
-   Branch: [%r12] true: Label_ 30 false Label_ 31
+   [%r14]= alloca i64
+   [%r14]=[%r14] xor Immediate:1
+   Store [%r14] to [e]
+   [%r15] = [e] EQU Immediate:1
+   Branch: [%r15] true: Label_ 30 false Label_ 31
 
 --Label_ 30
-   Store Immediate:1 to [%r12]
+   Store Immediate:30 to [c]
    Jump: Label_ 32
 
 --Label_ 31
-   Store Immediate:0 to [%r12]
+   Jump: Label_ 32
 
 --Label_ 32
-   [%r13]= alloca i64
-   [%r13] = [%r12] NEQ Immediate:0
-   Branch: [%r13] true: Label_ 17 false Label_ 18
-
---Label_ 17
-   Store Immediate:1 to [%r13]
-   Jump: Label_ 19
-
---Label_ 18
-   Store Immediate:0 to [%r13]
-
---Label_ 19
-   [%r14]= alloca i64
-   [%r14]=[%r14] xor Immediate:1
-   [%r15] = [%r14] EQU Immediate:1
-   Branch: [%r15] true: Label_ 13 false Label_ 14
-
---Label_ 13
-   Store Immediate:30 to [c]
-   Jump: Label_ 15
-
---Label_ 14
-   Jump: Label_ 15
-
---Label_ 15
    Return: [c]
    Return
 

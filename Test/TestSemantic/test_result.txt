@@ -10,7 +10,8 @@ ProgNode
         IntConstNode  value = 0
       *VariableDeclaration: c
         BuiltInType: int
-      IfNode
+      *VariableDeclaration: d
+        BuiltInType: bool
         AndExprNode
           BinaryExprNode  Op: NEQ
             IdentifierExprNode  ID name: b
@@ -20,6 +21,8 @@ ProgNode
               IdentifierExprNode  ID name: a
               IdentifierExprNode  ID name: b
             IntConstNode  value = 1
+      IfNode
+        IdentifierExprNode  ID name: d
         BlockNode
           ExprStmtNode
             AssignExprNode
@@ -30,21 +33,27 @@ ProgNode
             AssignExprNode
               IdentifierExprNode  ID name: c
               IntConstNode  value = 20
-      IfNode
-        PrefixExprNode  Op: NOT
-          AndExprNode
+      *VariableDeclaration: e
+        BuiltInType: bool
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: e
+          PrefixExprNode  Op: NOT
             AndExprNode
+              AndExprNode
+                BinaryExprNode  Op: EQU
+                  IdentifierExprNode  ID name: c
+                  IntConstNode  value = 10
+                BinaryExprNode  Op: EQU
+                  BinaryExprNode  Op: DIV
+                    IdentifierExprNode  ID name: a
+                    IdentifierExprNode  ID name: b
+                  IntConstNode  value = 0
               BinaryExprNode  Op: EQU
-                IdentifierExprNode  ID name: c
-                IntConstNode  value = 10
-              BinaryExprNode  Op: EQU
-                BinaryExprNode  Op: DIV
-                  IdentifierExprNode  ID name: a
-                  IdentifierExprNode  ID name: b
-                IntConstNode  value = 0
-            BinaryExprNode  Op: EQU
-              IdentifierExprNode  ID name: a
-              IntConstNode  value = 5
+                IdentifierExprNode  ID name: a
+                IntConstNode  value = 5
+      IfNode
+        IdentifierExprNode  ID name: e
         ExprStmtNode
           AssignExprNode
             IdentifierExprNode  ID name: c
