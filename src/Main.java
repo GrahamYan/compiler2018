@@ -87,10 +87,10 @@ public class Main {
         InputStream is = new FileInputStream("program.txt");
         OutputStream out = System.out;
         ProgNode program = buildAST(is);
-  //      printAST(program);
+        //printAST(program);
         checkSemantic(program);
         IRGenerator irGenerator = generateIR(program);
-  //      printIR(irGenerator);
+        //printIR(irGenerator);
         translate(irGenerator,out);
     }
 
