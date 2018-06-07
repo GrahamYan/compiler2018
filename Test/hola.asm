@@ -18,7 +18,7 @@ section .text
 main:
        push  rbp
        mov  rbp,  rsp
-       sub  rsp,  48
+       sub  rsp,  64
        mov  rdi,  40
        call  malloc
        mov  qword [rbp-16],  rax
@@ -26,16 +26,52 @@ main:
        mov  qword [rbp-8],  rax
        mov  rax,  qword [rbp-8]
        mov  qword [rax + 8],  10
-       mov  rax,  2
+       mov  rax,  qword [rbp-8]
+       mov  qword [rax + 8],  20
        mov  rcx,  qword [rbp-8]
        mov  rbx,  qword [rcx + 8]
-       imul  rax,  rbx
-       mov  qword [rbp-24],  rax
-       mov  rax,  qword [rbp-24]
-       add  rsp,  48
+       mov  rsi,  qword [rbp-8]
+       mov  rdi,  qword [rsi + 8]
+       cmp  rbx,  rdi
+       jle  Label_1
+Label_0:
+       mov  qword [rbp-24],  1
+       jmp  Label_2
+Label_1:
+       mov  qword [rbp-24],  0
+Label_2:
+       mov  rcx,  qword [rbp-24]
+       mov  rax,  qword [rbp-8]
+       mov  qword [rax + 8],  rcx
+       mov  rcx,  qword [rbp-8]
+       mov  rbx,  qword [rcx + 8]
+       cmp  rbx,  1
+       jne  Label_4
+Label_3:
+       mov  rax,  qword [rbp-8]
+       mov  qword [rax + 8],  40
+       jmp  Label_5
+Label_4:
+       mov  rax,  qword [rbp-8]
+       mov  qword [rax + 8],  80
+       jmp  Label_5
+Label_5:
+       mov  rcx,  qword [rbp-8]
+       mov  rax,  qword [rcx + 8]
+       mov  rsi,  qword [rbp-8]
+       mov  rdi,  qword [rsi + 8]
+       add  rax,  rdi
+       mov  qword [rbp-32],  rax
+       mov  rax,  qword [rbp-32]
+       mov  rbx,  qword [rbp-8]
+       mov  rsi,  qword [rbx + 8]
+       add  rax,  rsi
+       mov  qword [rbp-40],  rax
+       mov  rax,  qword [rbp-40]
+       add  rsp,  64
        pop  rbp
        ret  
-       add  rsp,  48
+       add  rsp,  64
        pop  rbp
        ret  
 

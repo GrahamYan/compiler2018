@@ -2,72 +2,48 @@
 ****************IR**************
 
 
-define i64 @tak(i64, i64, i64)
-   [%r0]= alloca i64
-   [%r0] = [y] SLT [x]
-   Branch: [%r0] true: Label_3 false Label_4
-
---Label_3
-   Store Immediate:1 to [%r0]
-   Jump: Label_5
-
---Label_4
-   Store Immediate:0 to [%r0]
-
---Label_5
-   [%r1] = [%r0] EQU Immediate:1
+define i64 @main()
+   [obj]= alloca struct:C2:
+   [%r0]= alloca Immediate:8
+   [%r0]= Malloc Immediate:4
+   Store [%r0] to [obj]
+   Store Immediate:10 to [Address: x:[obj]+ offset Immediate:0*i64]
+   Store Immediate:20 to [Address: y:[obj]+ offset Immediate:1*i64]
+   [%r1]= alloca i64
+   [%r1] = [Address: x:[obj]+ offset Immediate:0*i64] SGT [Address: y:[obj]+ offset Immediate:1*i64]
    Branch: [%r1] true: Label_0 false Label_1
 
 --Label_0
-   [%r2]= alloca i64
-   [%r3]= alloca i64
-   [%r4]= alloca i64
-   [%r4]=[x] sub Immediate:1
-   [%r3] = Call @tak([%r4],[y],[z])
-   [%r5]= alloca i64
-   [%r6]= alloca i64
-   [%r6]=[y] sub Immediate:1
-   [%r5] = Call @tak([%r6],[z],[x])
-   [%r7]= alloca i64
-   [%r8]= alloca i64
-   [%r8]=[z] sub Immediate:1
-   [%r7] = Call @tak([%r8],[x],[y])
-   [%r2] = Call @tak([%r3],[%r5],[%r7])
-   [%r9]= alloca i64
-   [%r9]=Immediate:1 add [%r2]
-   Return: [%r9]
+   Store Immediate:1 to [%r1]
    Jump: Label_2
 
 --Label_1
-   Return: [z]
-   Jump: Label_2
+   Store Immediate:0 to [%r1]
 
 --Label_2
-   Return
+   Store [%r1] to [Address: b:[obj]+ offset Immediate:2*i64]
+   [%r2] = [Address: b:[obj]+ offset Immediate:2*i64] EQU Immediate:1
+   Branch: [%r2] true: Label_3 false Label_4
 
-define i64 @main()
-   [a]= alloca i64
-   [b]= alloca i64
-   [c]= alloca i64
-   [%r0]= alloca i64
-   [%r0] = Call @getInt(
-   Store [%r0] to [a]
-   [%r1]= alloca i64
-   [%r1] = Call @getInt(
-   Store [%r1] to [b]
-   [%r2]= alloca i64
-   [%r2] = Call @getInt(
-   Store [%r2] to [c]
+--Label_3
+   Store Immediate:40 to [Address: z:[obj]+ offset Immediate:3*i64]
+   Jump: Label_5
+
+--Label_4
+   Store Immediate:80 to [Address: z:[obj]+ offset Immediate:3*i64]
+   Jump: Label_5
+
+--Label_5
+   [%r3]= alloca i64
+   [%r3]=[Address: x:[obj]+ offset Immediate:0*i64] add [Address: y:[obj]+ offset Immediate:1*i64]
    [%r4]= alloca i64
-   [%r5]= alloca i64
-   [%r5] = Call @tak([a],[b],[c])
-   [%r4] = Call @toString([%r5])
-   Call @println([%r4])
-   Return: Immediate:0
+   [%r4]=[%r3] add [Address: z:[obj]+ offset Immediate:3*i64]
+   Return: [%r4]
    Return
 
 
 ***************TYPE*************
+struct:C2= type {i64 i64 i64 i64}
 
 
 ***************DATA*************
