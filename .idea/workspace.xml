@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Test/IRtest_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/IRtest_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,15 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AssignExprNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/AssignExprNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BinaryExprNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/BinaryExprNode.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -76,8 +61,8 @@
       <file leaf-file-name="IRGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11527">
-              <caret line="273" selection-start-line="273" selection-end-line="273" />
+            <state relative-caret-position="146">
+              <caret line="272" column="17" selection-start-line="272" selection-start-column="17" selection-end-line="272" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +73,8 @@
       <file leaf-file-name="Semantic.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
+            <state relative-caret-position="171">
+              <caret line="251" column="18" selection-start-line="251" selection-start-column="12" selection-end-line="251" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,8 +109,20 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="98" column="10" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="10" />
+            <state relative-caret-position="207">
+              <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Translator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/Translator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="259" column="16" selection-start-line="259" selection-start-column="10" selection-end-line="259" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,9 +167,9 @@
       <find>nasm</find>
       <find>Vitual</find>
       <find>classname</find>
-      <find>System</find>
       <find>wtl</find>
       <find>setClass</find>
+      <find>System</find>
     </findStrings>
     <replaceStrings>
       <replace>{</replace>
@@ -239,9 +236,9 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/Optimizer/Allocator.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/Label.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/Translator/Translator.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTBuilder.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -521,7 +518,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19426337" side_tool="true" weight="0.32960895" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.80573666" visible="true" weight="0.033519555" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.80573666" visible="true" weight="0.062849164" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
@@ -664,16 +661,6 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3141#3142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/Translator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="135" column="10" lean-forward="true" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -956,26 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11527">
-          <caret line="273" selection-start-line="273" selection-end-line="273" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Scope.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3100">
@@ -996,10 +963,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/Translator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="259" column="16" selection-start-line="259" selection-start-column="10" selection-end-line="259" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="251" column="18" selection-start-line="251" selection-start-column="12" selection-end-line="251" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="272" column="17" selection-start-line="272" selection-start-column="17" selection-end-line="272" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="98" column="10" selection-start-line="98" selection-start-column="10" selection-end-line="98" selection-end-column="10" />
+        <state relative-caret-position="207">
+          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

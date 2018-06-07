@@ -266,7 +266,7 @@ public class IRGenerator implements IRTraversal {
     @Override
     public IntegerValue visit(CallExprNode node) {
         //System.out.println(node.getFuncName());
-        System.out.println(node.getFunction());
+        //System.out.println(node.getFunction());
         //System.out.println(node.getParameter());
         VirtualRegister register = curFuncScope.getRegister();
         IRType irType = new BuiltIn();
