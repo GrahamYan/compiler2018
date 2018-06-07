@@ -265,7 +265,7 @@ public class ASTBuilder extends MxsBaseListener{
     }
     @Override
     public void exitStringConstExpr(MxsParser.StringConstExprContext ctx) {
-        String value = ctx.getText();
+        String value = ctx.getText().substring(1,ctx.getText().length() - 1);
         map.put(ctx, new StringConstNode(new location(ctx.getStart().getLine(), 0), value));
     }
     @Override

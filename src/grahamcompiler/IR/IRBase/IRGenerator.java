@@ -19,7 +19,6 @@ import grahamcompiler.IR.IRType.Array;
 import grahamcompiler.IR.Label;
 import grahamcompiler.utility.Scope;
 import grahamcompiler.utility.UnaryOp;
-
 import grahamcompiler.Translator.NasmInst;
 
 import java.util.ArrayList;
@@ -220,7 +219,11 @@ public class IRGenerator implements IRTraversal {
     public IntegerValue visit(ArrayExprNode node) {
         IntegerValue index = visit(node.getIndex());
         Address array = (Address)visit(node.getArray());
-        return new Address(array.getName(),array,index);
+        Address arrayAddress = new Address(curFuncScope.getRegister().getName(), new BuiltIn());
+        addInst(new Alloca(curLab, arrayAddress, new BuiltIn()));
+        curFuncScope.incSlotNum();
+        addInst(new Store(curLab, arrayAddress, array));
+        return new Address(array.getName(), arrayAddress, index);
     }
 
     @Override
@@ -234,7 +237,7 @@ public class IRGenerator implements IRTraversal {
 
     @Override
     public IntegerValue visit(BinaryExprNode node) {
-//        System.out.println("L" + node.getL());
+  //      System.out.println("L" + node.getL().getExprType().getTypeName().toString());
  //       System.out.println("R" + node.getR());
   //      System.out.println(node.getOp());
         if(node.getL().getExprType().getTypeName() == Name.getName("string"))
@@ -263,7 +266,7 @@ public class IRGenerator implements IRTraversal {
     @Override
     public IntegerValue visit(CallExprNode node) {
         //System.out.println(node.getFuncName());
-        //System.out.println(node.getFunction());
+        System.out.println(node.getFunction());
         //System.out.println(node.getParameter());
         VirtualRegister register = curFuncScope.getRegister();
         IRType irType = new BuiltIn();
@@ -482,7 +485,6 @@ public class IRGenerator implements IRTraversal {
 
         switch(node.getOption()) {
             case SUF_DEC:
-
                 addInst(new grahamcompiler.IR.BinaryOp(curLab, grahamcompiler.IR.BinaryOp.BinOp.sub,
                         (Address) value, value, new Immediate(1)));
                 return origin_address;
@@ -863,7 +865,15 @@ public class IRGenerator implements IRTraversal {
         if (node.size() != 0) {
             addInst(trueLabel);
             Address address1 = new Address(curFuncScope.getRegister().getName(), address, offset);
-            memoryAllocate(node, type, false, address1);
+
+            Address address2 = new Address(curFuncScope.getRegister().getName(), new BuiltIn());
+            addInst(new Alloca(curLab, address2, new BuiltIn()));
+            curFuncScope.incSlotNum();
+            addInst(new Store(curLab, address2, address1));
+
+            memoryAllocate(node, type, false, address2);
+            addInst(new Store(curLab, address1, address2));
+
             Address compare = new Address(curFuncScope.getRegister().getName(), new BuiltIn());
             addInst(new Alloca(curLab, compare,new BuiltIn()));
             curFuncScope.incSlotNum();

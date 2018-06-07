@@ -1,15 +1,48 @@
 ProgNode
-  *ClassDeclaration: C1
-    *VariableDeclaration: x
-      BuiltInType: int
+  *FunctionDeclaration: tak
+    BuiltInType: int
+    FuncParamNode Type: int    Name: x
+    FuncParamNode Type: int    Name: y
+    FuncParamNode Type: int    Name: z
+    BlockNode
+      IfNode
+        BinaryExprNode  Op: SLT
+          IdentifierExprNode  ID name: y
+          IdentifierExprNode  ID name: x
+        ReturnNode
+        ReturnNode
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: c1
-        ClassType: C1
+      *VariableDeclaration: a
+        BuiltInType: int
+      *VariableDeclaration: b
+        BuiltInType: int
+      *VariableDeclaration: c
+        BuiltInType: int
       ExprStmtNode
         AssignExprNode
-          MemberExprNode
-            IdentifierExprNode  ID name: c1
-          IntConstNode  value = 10
+          IdentifierExprNode  ID name: a
+          CallExprNode  Function Name: getInt
+            ExprListNode
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: b
+          CallExprNode  Function Name: getInt
+            ExprListNode
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: c
+          CallExprNode  Function Name: getInt
+            ExprListNode
+      ExprStmtNode
+        CallExprNode  Function Name: println
+          ExprListNode
+            CallExprNode  Function Name: toString
+              ExprListNode
+                CallExprNode  Function Name: tak
+                  ExprListNode
+                    IdentifierExprNode  ID name: a
+                    IdentifierExprNode  ID name: b
+                    IdentifierExprNode  ID name: c
       ReturnNode

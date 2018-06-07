@@ -2,20 +2,72 @@
 ****************IR**************
 
 
+define i64 @tak(i64, i64, i64)
+   [%r0]= alloca i64
+   [%r0] = [y] SLT [x]
+   Branch: [%r0] true: Label_3 false Label_4
+
+--Label_3
+   Store Immediate:1 to [%r0]
+   Jump: Label_5
+
+--Label_4
+   Store Immediate:0 to [%r0]
+
+--Label_5
+   [%r1] = [%r0] EQU Immediate:1
+   Branch: [%r1] true: Label_0 false Label_1
+
+--Label_0
+   [%r2]= alloca i64
+   [%r3]= alloca i64
+   [%r4]= alloca i64
+   [%r4]=[x] sub Immediate:1
+   [%r3] = Call @tak([%r4],[y],[z])
+   [%r5]= alloca i64
+   [%r6]= alloca i64
+   [%r6]=[y] sub Immediate:1
+   [%r5] = Call @tak([%r6],[z],[x])
+   [%r7]= alloca i64
+   [%r8]= alloca i64
+   [%r8]=[z] sub Immediate:1
+   [%r7] = Call @tak([%r8],[x],[y])
+   [%r2] = Call @tak([%r3],[%r5],[%r7])
+   [%r9]= alloca i64
+   [%r9]=Immediate:1 add [%r2]
+   Return: [%r9]
+   Jump: Label_2
+
+--Label_1
+   Return: [z]
+   Jump: Label_2
+
+--Label_2
+   Return
+
 define i64 @main()
-   [c1]= alloca struct:C1:
-   [%r0]= alloca Immediate:8
-   [%r0]= Malloc Immediate:4
-   Store [%r0] to [c1]
-   Store Immediate:10 to [Address: x:[c1]+ offset Immediate:0*i64]
+   [a]= alloca i64
+   [b]= alloca i64
+   [c]= alloca i64
+   [%r0]= alloca i64
+   [%r0] = Call @getInt(
+   Store [%r0] to [a]
    [%r1]= alloca i64
-   [%r1]=Immediate:2 imul [Address: x:[c1]+ offset Immediate:0*i64]
-   Return: [%r1]
+   [%r1] = Call @getInt(
+   Store [%r1] to [b]
+   [%r2]= alloca i64
+   [%r2] = Call @getInt(
+   Store [%r2] to [c]
+   [%r4]= alloca i64
+   [%r5]= alloca i64
+   [%r5] = Call @tak([a],[b],[c])
+   [%r4] = Call @toString([%r5])
+   Call @println([%r4])
+   Return: Immediate:0
    Return
 
 
 ***************TYPE*************
-struct:C1= type {i64}
 
 
 ***************DATA*************
