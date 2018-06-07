@@ -1,61 +1,15 @@
 ProgNode
+  *ClassDeclaration: C1
+    *VariableDeclaration: x
+      BuiltInType: int
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: a
-        BuiltInType: int
-        IntConstNode  value = 5
-      *VariableDeclaration: b
-        BuiltInType: int
-        IntConstNode  value = 0
-      *VariableDeclaration: c
-        BuiltInType: int
-      *VariableDeclaration: d
-        BuiltInType: bool
-        AndExprNode
-          BinaryExprNode  Op: NEQ
-            IdentifierExprNode  ID name: b
-            IntConstNode  value = 0
-          BinaryExprNode  Op: NEQ
-            BinaryExprNode  Op: DIV
-              IdentifierExprNode  ID name: a
-              IdentifierExprNode  ID name: b
-            IntConstNode  value = 1
-      IfNode
-        IdentifierExprNode  ID name: d
-        BlockNode
-          ExprStmtNode
-            AssignExprNode
-              IdentifierExprNode  ID name: c
-              IntConstNode  value = 10
-        BlockNode
-          ExprStmtNode
-            AssignExprNode
-              IdentifierExprNode  ID name: c
-              IntConstNode  value = 20
-      *VariableDeclaration: e
-        BuiltInType: bool
+      *VariableDeclaration: c1
+        ClassType: C1
       ExprStmtNode
         AssignExprNode
-          IdentifierExprNode  ID name: e
-          PrefixExprNode  Op: NOT
-            AndExprNode
-              AndExprNode
-                BinaryExprNode  Op: EQU
-                  IdentifierExprNode  ID name: c
-                  IntConstNode  value = 10
-                BinaryExprNode  Op: EQU
-                  BinaryExprNode  Op: DIV
-                    IdentifierExprNode  ID name: a
-                    IdentifierExprNode  ID name: b
-                  IntConstNode  value = 0
-              BinaryExprNode  Op: EQU
-                IdentifierExprNode  ID name: a
-                IntConstNode  value = 5
-      IfNode
-        IdentifierExprNode  ID name: e
-        ExprStmtNode
-          AssignExprNode
-            IdentifierExprNode  ID name: c
-            IntConstNode  value = 30
+          MemberExprNode
+            IdentifierExprNode  ID name: c1
+          IntConstNode  value = 10
       ReturnNode

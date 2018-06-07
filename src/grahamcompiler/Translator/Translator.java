@@ -131,7 +131,7 @@ public class Translator implements IRInstTraversal {
     @Override
     public void visit(BinaryOp inst) {
         if (inst.getOp() == BinaryOp.BinOp.idiv || inst.getOp() == BinaryOp.BinOp.mod) {
-            System.out.print(inst);
+           // System.out.print(inst);
             visitDivBinaryOp(inst);
             return;
         }
@@ -355,7 +355,7 @@ public class Translator implements IRInstTraversal {
     }
 
     private void visitDivBinaryOp(BinaryOp inst) {
-        System.out.print(inst.getLhsReg());
+        //System.out.print(inst.getLhsReg());
         if(inst.getLhs() instanceof Immediate)
             addInst(NasmInst.Instruction.mov, inst.getLhsReg().toString(), String.valueOf(((Immediate) inst.getLhs()).getValue()));
         else

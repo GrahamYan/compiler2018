@@ -234,9 +234,9 @@ public class IRGenerator implements IRTraversal {
 
     @Override
     public IntegerValue visit(BinaryExprNode node) {
-        System.out.println("L" + node.getL());
-        System.out.println("R" + node.getR());
-        System.out.println(node.getOp());
+//        System.out.println("L" + node.getL());
+ //       System.out.println("R" + node.getR());
+  //      System.out.println(node.getOp());
         if(node.getL().getExprType().getTypeName() == Name.getName("string"))
             return dealStringOperation(node);
 //        VirtualRegister dest = currentFunction.getRegister();
