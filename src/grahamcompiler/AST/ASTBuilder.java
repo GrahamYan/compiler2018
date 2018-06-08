@@ -254,7 +254,7 @@ public class ASTBuilder extends MxsBaseListener{
     }
     @Override
     public void exitBoolConstExpr(MxsParser.BoolConstExprContext ctx) {
-        boolean value = ctx.getText() == "true";
+        boolean value = ctx.FALSE() == null;
         BoolConstNode node = new BoolConstNode(new location(ctx.getStart().getLine(), 0), value);
         map.put(ctx, node);
     }

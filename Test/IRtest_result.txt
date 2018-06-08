@@ -2,62 +2,123 @@
 ****************IR**************
 
 
-define i64 @foo(i64, i64, i64)
-   [%r1]= alloca i64
-   [%r2]= alloca i64
-   [%r2]=[d] imul Immediate:1000
-   [%r3]= alloca i64
-   [%r3]=[x] imul Immediate:10
-   [%r4]= alloca i64
-   [%r4]=[%r2] add [%r3]
-   [%r5]= alloca i64
-   [%r5]=[%r4] add [y]
-   [%r1] = Call @toString([%r5])
-   Call @println([%r1])
-   [%r6]= alloca i64
-   [%r6] = [d] EQU Immediate:1
-   Branch: [%r6] true: Label_3 false Label_4
+define i64 @pd(i64)
 
---Label_3
-   Store Immediate:1 to [%r6]
-   Jump: Label_5
+--Label_2
+   [%r0]= alloca i64
+   [%r0] = [h] SEQ [x]
+   Branch: [%r0] true: Label_4 false Label_5
 
 --Label_4
-   Store Immediate:0 to [%r6]
+   Store Immediate:1 to [%r0]
+   Jump: Label_6
 
 --Label_5
-   [%r7] = [%r6] EQU Immediate:1
-   Branch: [%r7] true: Label_0 false Label_1
+   Store Immediate:0 to [%r0]
+
+--Label_6
+   [%r1] = [%r0] EQU Immediate:1
+   Branch: [%r1] true: Label_0 false Label_1
 
 --Label_0
-   Return
+   [%r2]= alloca i64
+   [%r2]=[h] add Immediate:1
+   [%r3]= alloca i64
+   [%r3]=[h] imul [%r2]
+   [%r4]= alloca i64
+   [%r4]=[%r3] idiv Immediate:2
+   [%r5]= alloca i64
+   [%r5] = [x] EQU [%r4]
+   Branch: [%r5] true: Label_10 false Label_11
+
+--Label_10
+   Store Immediate:1 to [%r5]
+   Jump: Label_12
+
+--Label_11
+   Store Immediate:0 to [%r5]
+
+--Label_12
+   [%r6] = [%r5] EQU Immediate:1
+   Branch: [%r6] true: Label_7 false Label_8
+
+--Label_7
+   [fuck]= alloca i64
+   Store Immediate:1 to [fuck]
+   Return: [fuck]
+   Jump: Label_9
+
+--Label_8
+   Jump: Label_9
+
+--Label_9
+
+--Label_3
+   [h]=[h] add Immediate:1
+   Store %r7 to [h]
    Jump: Label_2
 
 --Label_1
-   Jump: Label_2
-
---Label_2
-   [t]= alloca i64
-   Store [x] to [t]
-   Store [y] to [x]
-   Store [t] to [y]
-   Call @foo(Immediate:1,[x],[y])
-   [%r10]= alloca i64
-   [%r11]= alloca i64
-   [%r11]=[d] imul Immediate:1000
-   [%r12]= alloca i64
-   [%r12]=[x] imul Immediate:10
-   [%r13]= alloca i64
-   [%r13]=[%r11] add [%r12]
-   [%r14]= alloca i64
-   [%r14]=[%r13] add [y]
-   [%r10] = Call @toString([%r14])
-   Call @println([%r10])
-   Return
+   Return: Immediate:0
    Return
 
 define i64 @main()
-   Call @foo(Immediate:7,Immediate:5,Immediate:3)
+ Store NULL to[n]
+ Store NULL to[h]
+ Store NULL to[now]
+ 
+ Store NULL to[Q]
+ Store NULL to[R]
+   [i]= alloca i64
+   Store Immediate:0 to [i]
+   [temp]= alloca i64
+   Store Immediate:0 to [temp]
+   [count]= alloca i64
+   Store Immediate:0 to [count]
+   [fff]= alloca i64
+   Store Immediate:1 to [fff]
+   [%r0]= alloca i64
+   [%r0]=Immediate:3 imul Immediate:7
+   [%r1]= alloca i64
+   [%r1]=[%r0] imul Immediate:10
+   Store [%r1] to [n]
+   Store Immediate:0 to [h]
+   [%r3]= alloca i64
+   [%r3] = Call @toString([n])
+   Call @println([%r3])
+   [%r4]= alloca i64
+   [%r4]= Malloc Immediate:100
+   Store Immediate:100 to [Address: %r4_size:[%r4]+ offset Immediate:-1*i64]
+   Store [%r4] to [a]
+   [%r5]= alloca i64
+   [%r5]=[M] idiv [A]
+   Store [%r5] to [Q]
+   [%r7]= alloca i64
+   [%r7] = Call @toString([Q])
+   Call @println([%r7])
+   [%r8]= alloca i64
+   [%r8]=[M] mod [A]
+   Store [%r8] to [R]
+   [%r10]= alloca i64
+   [%r10] = Call @toString([R])
+   Call @println([%r10])
+   [%r11]= alloca i64
+   [%r11] = Call @pd([n])
+   [%r12]= alloca i64
+   [%r12]=[%r11] xor Immediate:1
+   [%r13] = [%r12] EQU Immediate:1
+   Branch: [%r13] true: Label_13 false Label_14
+
+--Label_13
+   Call @println([String_0])
+   Return: Immediate:1
+   Jump: Label_15
+
+--Label_14
+   Jump: Label_15
+
+--Label_15
+   Call @println([String_1])
    Return: Immediate:0
    Return
 
@@ -66,3 +127,5 @@ define i64 @main()
 
 
 ***************DATA*************
+String_0: Sorry, the number n must be a number s.t. there exists i satisfying n=1+2+...+i
+String_1: Let's start!

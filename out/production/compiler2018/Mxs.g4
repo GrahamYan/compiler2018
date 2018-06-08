@@ -82,7 +82,8 @@ expr : funcname '(' exprs? ')'                          #callExpr//expression
    // |'0'                                                    #intConstExpr
     | STR                                                   #stringConstExpr//string
     | 'null'                                                #nullExpr//null
-    | ('TRUE' | 'true' | 'FALSE' | 'false')                 #boolConstExpr//true or false
+    | TRUE                 #boolConstExpr//true or false
+    | FALSE                 #boolConstExpr
     | <assoc=right> expr op = '=' expr                      #assignExpr//evaluation
     | 'this'                                                #thisExpr//this
     ;

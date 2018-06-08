@@ -301,7 +301,7 @@ public class ASTPrinter implements ASTVisitor {
     @Override
     public void visit(ReturnNode node) {
         if(node == null) return;
-        printStream.println(indent.toString() + node.getClass().getSimpleName());
+        printStream.println(indent.toString() + node.getClass().getSimpleName() + "Expr:" + node.getExpress().getClass().getSimpleName());
     }
 
     @Override
