@@ -1,48 +1,67 @@
 ProgNode
-  *FunctionDeclaration: tak
-    BuiltInType: int
+  *FunctionDeclaration: foo
+    BuiltInType: void
+    FuncParamNode Type: int    Name: d
     FuncParamNode Type: int    Name: x
     FuncParamNode Type: int    Name: y
-    FuncParamNode Type: int    Name: z
     BlockNode
-      IfNode
-        BinaryExprNode  Op: SLT
-          IdentifierExprNode  ID name: y
-          IdentifierExprNode  ID name: x
-        ReturnNode
-        ReturnNode
-  *FunctionDeclaration: main
-    BuiltInType: int
-    BlockNode
-      *VariableDeclaration: a
-        BuiltInType: int
-      *VariableDeclaration: b
-        BuiltInType: int
-      *VariableDeclaration: c
-        BuiltInType: int
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: a
-          CallExprNode  Function Name: getInt
-            ExprListNode
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: b
-          CallExprNode  Function Name: getInt
-            ExprListNode
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: c
-          CallExprNode  Function Name: getInt
-            ExprListNode
       ExprStmtNode
         CallExprNode  Function Name: println
           ExprListNode
             CallExprNode  Function Name: toString
               ExprListNode
-                CallExprNode  Function Name: tak
-                  ExprListNode
-                    IdentifierExprNode  ID name: a
-                    IdentifierExprNode  ID name: b
-                    IdentifierExprNode  ID name: c
+                BinaryExprNode  Op: ADD
+                  BinaryExprNode  Op: ADD
+                    BinaryExprNode  Op: MUL
+                      IdentifierExprNode  ID name: d
+                      IntConstNode  value = 1000
+                    BinaryExprNode  Op: MUL
+                      IdentifierExprNode  ID name: x
+                      IntConstNode  value = 10
+                  IdentifierExprNode  ID name: y
+      IfNode
+        BinaryExprNode  Op: EQU
+          IdentifierExprNode  ID name: d
+          IntConstNode  value = 1
+        ReturnNode
+      *VariableDeclaration: t
+        BuiltInType: int
+        IdentifierExprNode  ID name: x
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: x
+          IdentifierExprNode  ID name: y
+      ExprStmtNode
+        AssignExprNode
+          IdentifierExprNode  ID name: y
+          IdentifierExprNode  ID name: t
+      ExprStmtNode
+        CallExprNode  Function Name: foo
+          ExprListNode
+            IntConstNode  value = 1
+            IdentifierExprNode  ID name: x
+            IdentifierExprNode  ID name: y
+      ExprStmtNode
+        CallExprNode  Function Name: println
+          ExprListNode
+            CallExprNode  Function Name: toString
+              ExprListNode
+                BinaryExprNode  Op: ADD
+                  BinaryExprNode  Op: ADD
+                    BinaryExprNode  Op: MUL
+                      IdentifierExprNode  ID name: d
+                      IntConstNode  value = 1000
+                    BinaryExprNode  Op: MUL
+                      IdentifierExprNode  ID name: x
+                      IntConstNode  value = 10
+                  IdentifierExprNode  ID name: y
+  *FunctionDeclaration: main
+    BuiltInType: int
+    BlockNode
+      ExprStmtNode
+        CallExprNode  Function Name: foo
+          ExprListNode
+            IntConstNode  value = 7
+            IntConstNode  value = 5
+            IntConstNode  value = 3
       ReturnNode

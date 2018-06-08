@@ -67,8 +67,8 @@ expr : funcname '(' exprs? ')'                          #callExpr//expression
     | op = ('++' | '--') expr                               #prefixExpr//++num or --num
     | expr op = ('++' | '--')                               #suffixExpr//num++ or num--
     | op = ('-' | '!' | '~') expr                           #prefixExpr//
-    | expr op = ('+' | '-') expr                            #binaryExpr// add or sub
     | expr op = ('*' | '/' | '%') expr                      #binaryExpr//mult or div or mod
+    | expr op = ('+' | '-') expr                            #binaryExpr// add or sub
     | expr op = ('<<' | '>>') expr                          #binaryExpr//read or write
     | expr op = '&' expr                                    #binaryExpr//and
     | expr op = '^' expr                                    #binaryExpr//xor

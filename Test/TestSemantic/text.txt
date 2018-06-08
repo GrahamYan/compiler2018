@@ -1,16 +1,11 @@
-class C2 {
-    int x;
-    int y;
-    bool b;
-    int z;
+void foo(int d, int x, int y) {
+    println(toString(d*1000 + x*10 + y));
+    if (d == 1) return;
+    int t = x; x = y; y = t;
+    foo(1, x, y);
+    println(toString(d*1000 + x*10 + y));
 }
-
 int main() {
-    C2 obj = new C2;
-    obj.x = 10;
-    obj.y = 20;
-    obj.b = obj.x > obj.y;
-    if (obj.b) obj.z = 40;
-    else obj.z = 80;
-    return obj.x + obj.y + obj.z;
+    foo(7, 5, 3);
+    return 0;
 }

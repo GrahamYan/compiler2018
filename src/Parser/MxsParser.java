@@ -1,5 +1,4 @@
 package Parser;
-
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -41,7 +40,7 @@ public class MxsParser extends Parser {
 		null, "'='", "';'", "'['", "']'", "'int'", "'bool'", "'void'", "'string'", 
 		"'class'", "'{'", "'}'", "'('", "')'", "','", "'if'", "'else'", "'for'", 
 		"'while'", "'return'", "'break'", "'continue'", "'new'", "'.'", "'++'", 
-		"'--'", "'-'", "'!'", "'~'", "'+'", "'*'", "'/'", "'%'", "'<<'", "'>>'", 
+		"'--'", "'-'", "'!'", "'~'", "'*'", "'/'", "'%'", "'+'", "'<<'", "'>>'", 
 		"'&'", "'^'", "'|'", "'>'", "'<'", "'>='", "'<='", "'=='", "'!='", "'&&'", 
 		"'||'", "'null'", "'TRUE'", "'true'", "'FALSE'", "'false'", "'this'"
 	};
@@ -2046,7 +2045,7 @@ public class MxsParser extends Parser {
 						setState(213);
 						((BinaryExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
-						if ( !(_la==T__25 || _la==T__28) ) {
+						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__28) | (1L << T__29) | (1L << T__30))) != 0)) ) {
 							((BinaryExprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 						}
 						else {
@@ -2067,7 +2066,7 @@ public class MxsParser extends Parser {
 						setState(216);
 						((BinaryExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
-						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__29) | (1L << T__30) | (1L << T__31))) != 0)) ) {
+						if ( !(_la==T__25 || _la==T__31) ) {
 							((BinaryExprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 						}
 						else {
@@ -2718,7 +2717,7 @@ public class MxsParser extends Parser {
 		"\24\u0130\n\24\f\24\16\24\u0133\13\24\3\24\3\24\5\24\u0137\n\24\3\24\3"+
 		"\24\3\24\3\24\5\24\u013d\n\24\5\24\u013f\n\24\3\25\3\25\3\25\5\25\u0144"+
 		"\n\25\3\25\3\25\3\25\2\3$\26\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \""+
-		"$&(\2\n\3\2\7\n\3\2\32\33\3\2\34\36\3\2\61\64\4\2\34\34\37\37\3\2 \"\3"+
+		"$&(\2\n\3\2\7\n\3\2\32\33\3\2\34\36\3\2\61\64\3\2\37!\4\2\34\34\"\"\3"+
 		"\2#$\3\2(-\2\u0176\2/\3\2\2\2\4\64\3\2\2\2\6\66\3\2\2\2\b>\3\2\2\2\nG"+
 		"\3\2\2\2\fI\3\2\2\2\16M\3\2\2\2\20V\3\2\2\2\22X\3\2\2\2\24Z\3\2\2\2\26"+
 		"f\3\2\2\2\30h\3\2\2\2\32w\3\2\2\2\34y\3\2\2\2\36{\3\2\2\2 \u00b2\3\2\2"+

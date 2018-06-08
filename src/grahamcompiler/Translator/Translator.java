@@ -40,7 +40,7 @@ public class Translator implements IRInstTraversal {
         this.dataSection = dataSection;
         this.dataZone = dataZone;
         this.bssZone = bssZone;
-        rspPosition = 8;//cannot begin with 0
+        rspPosition = 8;
         nasmInsts = new LinkedList<>();
         dataInsts = new LinkedList<>();
         dataZoneInsts = new LinkedList<>();

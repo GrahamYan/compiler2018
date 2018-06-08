@@ -2,48 +2,67 @@
 ****************IR**************
 
 
-define i64 @main()
-   [obj]= alloca struct:C2:
-   [%r0]= alloca Immediate:8
-   [%r0]= Malloc Immediate:4
-   Store [%r0] to [obj]
-   Store Immediate:10 to [Address: x:[obj]+ offset Immediate:0*i64]
-   Store Immediate:20 to [Address: y:[obj]+ offset Immediate:1*i64]
+define i64 @foo(i64, i64, i64)
    [%r1]= alloca i64
-   [%r1] = [Address: x:[obj]+ offset Immediate:0*i64] SGT [Address: y:[obj]+ offset Immediate:1*i64]
-   Branch: [%r1] true: Label_0 false Label_1
-
---Label_0
-   Store Immediate:1 to [%r1]
-   Jump: Label_2
-
---Label_1
-   Store Immediate:0 to [%r1]
-
---Label_2
-   Store [%r1] to [Address: b:[obj]+ offset Immediate:2*i64]
-   [%r2] = [Address: b:[obj]+ offset Immediate:2*i64] EQU Immediate:1
-   Branch: [%r2] true: Label_3 false Label_4
+   [%r2]= alloca i64
+   [%r2]=[d] imul Immediate:1000
+   [%r3]= alloca i64
+   [%r3]=[x] imul Immediate:10
+   [%r4]= alloca i64
+   [%r4]=[%r2] add [%r3]
+   [%r5]= alloca i64
+   [%r5]=[%r4] add [y]
+   [%r1] = Call @toString([%r5])
+   Call @println([%r1])
+   [%r6]= alloca i64
+   [%r6] = [d] EQU Immediate:1
+   Branch: [%r6] true: Label_3 false Label_4
 
 --Label_3
-   Store Immediate:40 to [Address: z:[obj]+ offset Immediate:3*i64]
+   Store Immediate:1 to [%r6]
    Jump: Label_5
 
 --Label_4
-   Store Immediate:80 to [Address: z:[obj]+ offset Immediate:3*i64]
-   Jump: Label_5
+   Store Immediate:0 to [%r6]
 
 --Label_5
-   [%r3]= alloca i64
-   [%r3]=[Address: x:[obj]+ offset Immediate:0*i64] add [Address: y:[obj]+ offset Immediate:1*i64]
-   [%r4]= alloca i64
-   [%r4]=[%r3] add [Address: z:[obj]+ offset Immediate:3*i64]
-   Return: [%r4]
+   [%r7] = [%r6] EQU Immediate:1
+   Branch: [%r7] true: Label_0 false Label_1
+
+--Label_0
+   Return
+   Jump: Label_2
+
+--Label_1
+   Jump: Label_2
+
+--Label_2
+   [t]= alloca i64
+   Store [x] to [t]
+   Store [y] to [x]
+   Store [t] to [y]
+   Call @foo(Immediate:1,[x],[y])
+   [%r10]= alloca i64
+   [%r11]= alloca i64
+   [%r11]=[d] imul Immediate:1000
+   [%r12]= alloca i64
+   [%r12]=[x] imul Immediate:10
+   [%r13]= alloca i64
+   [%r13]=[%r11] add [%r12]
+   [%r14]= alloca i64
+   [%r14]=[%r13] add [y]
+   [%r10] = Call @toString([%r14])
+   Call @println([%r10])
+   Return
+   Return
+
+define i64 @main()
+   Call @foo(Immediate:7,Immediate:5,Immediate:3)
+   Return: Immediate:0
    Return
 
 
 ***************TYPE*************
-struct:C2= type {i64 i64 i64 i64}
 
 
 ***************DATA*************

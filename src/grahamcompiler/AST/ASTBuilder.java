@@ -244,11 +244,12 @@ public class ASTBuilder extends MxsBaseListener{
     }
     @Override
     public void exitNonArrayNew(MxsParser.NonArrayNewContext ctx) {
-        Type type;
+ /*       Type type;
         if (ctx.classname() != null) {
             type = new Type(ctx.classname().ID().getText(),1);
         }
-        else type = new Type(ctx.classname().getText(),1);
+        else type = new Type(ctx.classname().getText(),1);*/
+        Type type = new Type(ctx.classname().ID().getText(),1);
         map.put(ctx, new CreatorExprNode(new location(ctx.getStart().getLine(), 0), type, new ArrayList<>(), 0));
     }
     @Override
