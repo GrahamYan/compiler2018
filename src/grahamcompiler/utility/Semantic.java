@@ -301,10 +301,13 @@ public class Semantic implements ASTVisitor {
 
     @Override
     public void visit(CreatorExprNode node) {
+        //System.out.println(node.getType().getTypeName());
         if(node == null) return;
         for (ExprNode item: node.getExpresses())
             visit(item);
-        if(!currentScope.containsType(node.getType().getTypeName())) {
+        if(!currentScope.containsType
+                (node.getType()
+                        .getTypeName())) {
             error.addError(node.getLocation(),
                     node.getType().getTypeName().toString() + " is not declared");
         }

@@ -1,124 +1,36 @@
 ProgNode
-  *VariableDeclaration: n
-    BuiltInType: int
-  *VariableDeclaration: h
-    BuiltInType: int
-  *VariableDeclaration: now
-    BuiltInType: int
   *VariableDeclaration: a
     ArrayType: int
-  *VariableDeclaration: A
+  *VariableDeclaration: i
     BuiltInType: int
-    IntConstNode  value = 48271
-  *VariableDeclaration: M
+  *VariableDeclaration: j
     BuiltInType: int
-    IntConstNode  value = 2147483647
-  *VariableDeclaration: Q
-    BuiltInType: int
-  *VariableDeclaration: R
-    BuiltInType: int
-  *VariableDeclaration: seed
-    BuiltInType: int
-    IntConstNode  value = 1
-  *FunctionDeclaration: pd
-    BuiltInType: bool
-    FuncParamNode Type: int    Name: x
-    BlockNode
-      ForNode
-        BinaryExprNode  Op: SEQ
-          IdentifierExprNode  ID name: h
-          IdentifierExprNode  ID name: x
-        PrefixExprNode  Op: INC
-          IdentifierExprNode  ID name: h
-        IfNode
-          BinaryExprNode  Op: EQU
-            IdentifierExprNode  ID name: x
-            BinaryExprNode  Op: DIV
-              BinaryExprNode  Op: MUL
-                IdentifierExprNode  ID name: h
-                BinaryExprNode  Op: ADD
-                  IdentifierExprNode  ID name: h
-                  IntConstNode  value = 1
-              IntConstNode  value = 2
-          BlockNode
-            *VariableDeclaration: fuck
-              BuiltInType: bool
-              BoolConstNode  value = true
-            ReturnNodeExpr:IdentifierExprNode
-      ReturnNodeExpr:BoolConstNode
+  *ClassDeclaration: rec
+    *VariableDeclaration: num
+      BuiltInType: int
+    *VariableDeclaration: c
+      BuiltInType: int
+  *VariableDeclaration: b
+    ArrayType: rec
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: i
+      *VariableDeclaration: x
         BuiltInType: int
         IntConstNode  value = 0
-      *VariableDeclaration: temp
+      *VariableDeclaration: y
         BuiltInType: int
-        IntConstNode  value = 0
-      *VariableDeclaration: count
-        BuiltInType: int
-        IntConstNode  value = 0
-      *VariableDeclaration: fff
-        BuiltInType: bool
-        BoolConstNode  value = true
+        IntConstNode  value = 1
       ExprStmtNode
         AssignExprNode
-          IdentifierExprNode  ID name: n
-          BinaryExprNode  Op: MUL
-            BinaryExprNode  Op: MUL
-              IntConstNode  value = 3
-              IntConstNode  value = 7
-            IntConstNode  value = 10
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: h
-          IntConstNode  value = 0
+          IdentifierExprNode  ID name: x
+          BinaryExprNode  Op: ADD
+            IdentifierExprNode  ID name: x
+            IdentifierExprNode  ID name: y
       ExprStmtNode
         CallExprNode  Function Name: println
           ExprListNode
             CallExprNode  Function Name: toString
               ExprListNode
-                IdentifierExprNode  ID name: n
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: a
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: Q
-          BinaryExprNode  Op: DIV
-            IdentifierExprNode  ID name: M
-            IdentifierExprNode  ID name: A
-      ExprStmtNode
-        CallExprNode  Function Name: println
-          ExprListNode
-            CallExprNode  Function Name: toString
-              ExprListNode
-                IdentifierExprNode  ID name: Q
-      ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: R
-          BinaryExprNode  Op: MOD
-            IdentifierExprNode  ID name: M
-            IdentifierExprNode  ID name: A
-      ExprStmtNode
-        CallExprNode  Function Name: println
-          ExprListNode
-            CallExprNode  Function Name: toString
-              ExprListNode
-                IdentifierExprNode  ID name: R
-      IfNode
-        PrefixExprNode  Op: NOT
-          CallExprNode  Function Name: pd
-            ExprListNode
-              IdentifierExprNode  ID name: n
-        BlockNode
-          ExprStmtNode
-            CallExprNode  Function Name: println
-              ExprListNode
-                StringConstNode  value = Sorry, the number n must be a number s.t. there exists i satisfying n=1+2+...+i
-          ReturnNodeExpr:IntConstNode
-      ExprStmtNode
-        CallExprNode  Function Name: println
-          ExprListNode
-            StringConstNode  value = Let's start!
+                IdentifierExprNode  ID name: x
       ReturnNodeExpr:IntConstNode
