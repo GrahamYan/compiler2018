@@ -1,75 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/IRtest_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/IRtest_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/test_result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Mxs.g4" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Mxs.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsBaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$AndExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$AndExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ArrayExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ArrayExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ArrayNewContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ArrayNewContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ArraytypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ArraytypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$AssignExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$AssignExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BasetypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BasetypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BinaryExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BinaryExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BlockContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BlockStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BlockStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BoolConstExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BoolConstExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BreakStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$BreakStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$CallExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$CallExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ClassnameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ClassnameContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$CompilationUnitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$CompilationUnitContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ContinueStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ContinueStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefclassContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefclassContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefuncContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefuncContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefvarContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefvarContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefvarsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$DefvarsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$EmptyStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$EmptyStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ExprStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ExprStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ExprsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ExprsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ForStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ForStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$FuncnameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$FuncnameContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$FunctionCallContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$FunctionCallContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$IdExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$IdExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$IfStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$IfStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$IntConstExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$IntConstExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$MemberExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$MemberExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NewExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NewExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NewsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NewsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NonArrayNewContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NonArrayNewContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NullExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$NullExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$OrExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$OrExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ParamContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ParamContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ParamsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ParamsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$PrefixExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$PrefixExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ReturnStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ReturnStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$StmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$StmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$StringConstExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$StringConstExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$SubExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$SubExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$SuffixExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$SuffixExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ThisExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$ThisExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$TypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$TypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$TypenameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$TypenameContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$VarDeclStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$VarDeclStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$VarnameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$VarnameContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$WhileStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$WhileStmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$WrongNewContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser$WrongNewContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/Parser/MxsParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mxs.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mxs.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/MxsVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/MxsVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/AST/ASTPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/utility/ScopeCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/ScopeCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" afterDir="false" />
-    </list>
+    <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -83,8 +15,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="96" column="17" lean-forward="true" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
+            <state relative-caret-position="416">
+              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1195,8 +1127,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="96" column="17" lean-forward="true" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
+        <state relative-caret-position="416">
+          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
