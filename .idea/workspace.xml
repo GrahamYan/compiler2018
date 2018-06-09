@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/Translator/NasmPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compiler2018/grahamcompiler/Translator/NasmPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="94" column="14" lean-forward="true" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
+            <state relative-caret-position="179">
+              <caret line="92" column="12" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,8 +50,8 @@
       <file leaf-file-name="NasmPrinter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+            <state relative-caret-position="365">
+              <caret line="254" column="30" lean-forward="true" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1035,8 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
+        <state relative-caret-position="365">
+          <caret line="254" column="30" lean-forward="true" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1045,8 +1041,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="94" column="14" lean-forward="true" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="14" />
+        <state relative-caret-position="179">
+          <caret line="92" column="12" lean-forward="true" selection-start-line="92" selection-start-column="12" selection-end-line="92" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
