@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="" />
+    <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +18,41 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+            <state relative-caret-position="252">
+              <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NasmInst.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmInst.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-551">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IRGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="316" column="37" lean-forward="true" selection-start-line="316" selection-start-column="37" selection-end-line="316" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NasmPrinter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-387">
+              <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -56,39 +89,6 @@
               <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdentifierExprNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/IdentifierExprNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExprStmtNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/ExprStmtNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#605#606#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CallExprNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/node/ExprNode/CallExprNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#1296#1297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/BreakNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/StmtNode.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/node/StmtNode/WhileNode.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/BasicBlock.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRScope.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRType/Class.java" />
@@ -235,13 +234,14 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/AST/ASTPrinter.java" />
         <option value="$PROJECT_DIR$/src/Mxs.g4" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/utility/Semantic.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="842" />
-    <option name="width" value="1085" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -277,42 +277,15 @@
               <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="AST" type="462c0819:PsiDirectoryNode" />
+              <item name="IR" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
               <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="AST" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="AST" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
-              <item name="DeclNode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="AST" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
-              <item name="ExprNode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="AST" type="462c0819:PsiDirectoryNode" />
-              <item name="node" type="462c0819:PsiDirectoryNode" />
-              <item name="StmtNode" type="462c0819:PsiDirectoryNode" />
+              <item name="IR" type="462c0819:PsiDirectoryNode" />
+              <item name="IRBase" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
@@ -320,26 +293,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
               <item name="Translator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="Type" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="grahamcompiler" type="462c0819:PsiDirectoryNode" />
-              <item name="utility" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="compiler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="compiler2018" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Parser" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -455,24 +408,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="674" y="0" width="868" height="830" extended-state="0" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Tool Output" order="8" weight="0.019337017" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4993789" weight="0.14917128" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4993789" weight="0.14804469" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.19426337" side_tool="true" weight="0.32960895" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.80573666" weight="0.24860336" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.80573666" visible="true" weight="0.24860336" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2997658" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18904825" />
       <window_info anchor="bottom" id="ANTLR Preview" order="12" weight="0.85055864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -493,17 +446,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/object/FuncObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/AST/object/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -546,13 +492,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmInst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-523">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -662,16 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="586" column="13" lean-forward="true" selection-start-line="586" selection-start-column="13" selection-end-line="586" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1125,10 +1054,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="316" column="37" lean-forward="true" selection-start-line="316" selection-start-column="37" selection-end-line="316" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmInst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-551">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="78" column="41" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+        <state relative-caret-position="252">
+          <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
