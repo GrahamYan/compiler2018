@@ -45,8 +45,7 @@ public class NasmPrinter {
         for(NasmInst item : nasmInsts) {
             boolean lohi = false;
             if (item.toString().indexOf("call") != -1 && item.toString().indexOf("lohi") != -1) {
-                printStream.println("       push  rbp\n" +
-                           "       mov  rbp,  rsp\n" +
+                printStream.println("       mov  rbp,  rsp\n" +
                            "       sub  rsp,  48\n" +
                            "       mov  qword [rbp-8],  rdi\n" +
                            "       mov  qword [rbp-16],  rsi\n" +
@@ -62,9 +61,7 @@ public class NasmPrinter {
                            "       add  rsp,  48\n" +
                            "       pop  rbp\n" +
                            "       ret  \n" +
-                           "       add  rsp,  48\n" +
-                           "       pop  rbp\n" +
-                           "       ret  ");
+                           "       add  rsp,  48\n");
             }
             else if(item.getInst() == NasmInst.Instruction.NULL) //means inst is a label
                 printStream.println(item.toString() + ":");
