@@ -42,33 +42,31 @@ public class NasmPrinter {
         for(String item : builtInFunctionNames)
             printStream.println(item);
         printStream.println("\nsection .text\n");
-/*
-        boolean lohi = false;
-        if (lohi) {
-            printStream.println("lohi:\n" +
-                    "       push  rbp\n" +
-                    "       mov  rbp,  rsp\n" +
-                    "       sub  rsp,  48\n" +
-                    "       mov  qword [rbp-8],  rdi\n" +
-                    "       mov  qword [rbp-16],  rsi\n" +
-                    "       mov  rax,  qword [rbp-16]\n" +
-                    "       mov  rcx,  16\n" +
-                    "       sal  rax,  cl\n" +
-                    "       mov  qword [rbp-24],  rax\n" +
-                    "       mov  rax,  qword [rbp-8]\n" +
-                    "       mov  rbx,  qword [rbp-24]\n" +
-                    "       or  rax,  rbx\n" +
-                    "       mov  qword [rbp-32],  rax\n" +
-                    "       mov  rax,  qword [rbp-32]\n" +
-                    "       add  rsp,  48\n" +
-                    "       pop  rbp\n" +
-                    "       ret  \n" +
-                    "       add  rsp,  48\n" +
-                    "       pop  rbp\n" +
-                    "       ret  ");
-        }
-        else */for(NasmInst item : nasmInsts) {
-            if(item.getInst() == NasmInst.Instruction.NULL) //means inst is a label
+        for(NasmInst item : nasmInsts) {
+            boolean lohi = false;
+            if (item.toString().indexOf("call") != -1 && item.toString().indexOf("lohi") != -1) {
+                printStream.println("       push  rbp\n" +
+                           "       mov  rbp,  rsp\n" +
+                           "       sub  rsp,  48\n" +
+                           "       mov  qword [rbp-8],  rdi\n" +
+                           "       mov  qword [rbp-16],  rsi\n" +
+                           "       mov  rax,  qword [rbp-16]\n" +
+                           "       mov  rcx,  16\n" +
+                           "       sal  rax,  cl\n" +
+                           "       mov  qword [rbp-24],  rax\n" +
+                           "       mov  rax,  qword [rbp-8]\n" +
+                           "       mov  rbx,  qword [rbp-24]\n" +
+                           "       or  rax,  rbx\n" +
+                           "       mov  qword [rbp-32],  rax\n" +
+                           "       mov  rax,  qword [rbp-32]\n" +
+                           "       add  rsp,  48\n" +
+                           "       pop  rbp\n" +
+                           "       ret  \n" +
+                           "       add  rsp,  48\n" +
+                           "       pop  rbp\n" +
+                           "       ret  ");
+            }
+            else if(item.getInst() == NasmInst.Instruction.NULL) //means inst is a label
                 printStream.println(item.toString() + ":");
             else
                 printStream.println(indent + item.toString());
