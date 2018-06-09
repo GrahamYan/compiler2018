@@ -42,10 +42,8 @@ public class NasmPrinter {
         for(String item : builtInFunctionNames)
             printStream.println(item);
         printStream.println("\nsection .text\n");
-
+/*
         boolean lohi = false;
-        if (nasmInsts.get(0).toString().equals("lohi"))
-            lohi = true;
         if (lohi) {
             printStream.println("lohi:\n" +
                     "       push  rbp\n" +
@@ -69,7 +67,7 @@ public class NasmPrinter {
                     "       pop  rbp\n" +
                     "       ret  ");
         }
-        else for(NasmInst item : nasmInsts) {
+        else */for(NasmInst item : nasmInsts) {
             if(item.getInst() == NasmInst.Instruction.NULL) //means inst is a label
                 printStream.println(item.toString() + ":");
             else
