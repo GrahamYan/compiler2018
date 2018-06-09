@@ -145,6 +145,8 @@ public class ASTPrinter implements ASTVisitor {
 
     @Override
     public void visit(CallExprNode node) {
+        //System.out.println("sss" + node.getClass().getSimpleName());
+        if(node == null) return;
         if(node == null) return;
         printStream.println(indent.toString() + node.getClass().getSimpleName() + "  Function Name: " + node.getFuncName());
         Tab();

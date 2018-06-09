@@ -1,55 +1,112 @@
-int[][] a = new int[4][];
-int i;
-int j;
-class rec {
-    int num;
-    int c;
+class point {
+	int x;
+	int y;
+	int z;
+	point() {
+		x = 0;
+		y = 0;
+		z = 0;
+	}
+	void set(int a_x, int a_y, int a_z){
+		x = a_x;
+		y = a_y;
+		z = a_z;
+	}
+	int sqrLen(){
+		return x * x + y * y + z * z;
+	}
+	int sqrDis(point other) {
+		return (x - other.x) * (x - other.x) + (y - other.y) * (y - other.y) + (z - other.z) * (z - other.z);
+	}
+	int dot(point other) {
+		return x * other.x + y * other.y + z * other.z;
+	}
+	point cross(point other) {
+		point retval = new point;
+		retval.set(y * other.z - z * other.y, z * other.x - x * other.z, x * other.y - y * other.x);
+		return retval;
+	}
+	point add(point other) {
+		x = x + other.x;
+		y = y + other.y;
+		z = z + other.z;
+		return this;
+	}
+	point sub(point other) {
+		x = x - other.x;
+		y = y - other.y;
+		z = z - other.z;
+		return this;
+	}
+	void printPoint() {
+		println("(" + toString(x) + ", " + toString(y) + ", " + toString(z) + ")");
+	}
 }
 
-rec[] b = new rec[5];
-
 int main() {
-	int x = 0;
-	int y = 1;
-	x = x + y;
-	println(toString(x));
-	
+	point a = new point;
+	point b = new point;
+	point c = new point;
+	point d = new point;
+	a.printPoint();
+	a.set(849, -463, 480);
+	b.set(-208, 585, -150);
+	c.set(360, -670, -742);
+	d.set(-29, -591, -960);
+	a.add(b);
+	b.add(c);
+	d.add(c);
+	c.sub(a);
+	b.sub(d);
+	d.sub(c);
+	c.add(b);
+	a.add(b);
+	b.add(b);
+	c.add(c);
+	a.sub(d);
+	a.add(b);
+	b.sub(c);
+	println(toString(a.sqrLen()));
+	println(toString(b.sqrLen()));
+	println(toString(b.sqrDis(c)));
+	println(toString(d.sqrDis(a)));
+	println(toString(c.dot(a)));
+	b.cross(d).printPoint();
+	a.printPoint();
+	b.printPoint();
+	c.printPoint();
+	d.printPoint();
 	return 0;
 }
 
 
-/*
-int printNum(int num) {
-    println(toString(num));
-}
-int main() {
-    for (i = 0; i < 4; i++) {
-        a[i] = new int[11];
-    }
+
+/*!! metadata:
+=== comment ===
+point-5140309561-sunxingyuan.txt
+=== is_public ===
+True
+=== assert ===
+output
+=== timeout ===
+0.1
+=== input ===
+
+=== phase ===
+codegen extended
+=== output ===
+(0, 0, 0)
+28716325
+7421636
+9980404
+38464544
+1854392
+(7616, 1666188, -1232986)
+(-508, 4119, 3390)
+(562, 1584, 2144)
+(-920, 768, -524)
+(612, -469, -630)
+=== exitcode ===
 
 
-    for (i = 0; i < 4; i ++) {
-        for (j = 0; j < 10; j ++)
-            a[i][j] = 888;
-    }
-    for (i = 0; i < 5; i ++) {
-	b[i] = new rec;
-        b[i].num = -1;
-    }
-
-    printNum(a[3][9]);
-    for (i = 0; i <= 3; i ++)
-        for (j = 0; j <= 9; j ++)
-            a[i][j] = i * 10 + j;
-
-    for (i = 0; i <= 3; i ++)
-        for (j = 0; j <= 9; j ++)
-            printNum(a[i][j]);
-    a[2][10]=0;
-    printNum(a[2][10]);
-    b[0].num = -2;
-    b[a[2][10]].num = -10;
-    printNum(b[0].num);
-    printNum(b[1].num);
-    return 0;
-}*/
+!!*/

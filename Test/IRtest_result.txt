@@ -2,35 +2,253 @@
 ****************IR**************
 
 
-define i64 @main()
- [%r0]= alloca i64
- [%r0]= Malloc Immediate:4
- Store Immediate:4 to [Address: %r0_size:[%r0]+ offset Immediate:-1*i64]
- [%r1]= alloca i64
- Store Immediate:0 to [%r1]
- MemCopy: [%r0] to [a]
- Store NULL to[i]
- Store NULL to[j]
- [%r2]= alloca i64
- [%r2]= Malloc Immediate:5
- Store Immediate:5 to [Address: %r2_size:[%r2]+ offset Immediate:-1*i64]
- MemCopy: [%r2] to [b]
-   [x]= alloca i64
-   Store Immediate:0 to [x]
-   [y]= alloca i64
-   Store Immediate:1 to [y]
+define struct:point: @__point__point(struct:point:)
+   Store Immediate:0 to [Address: point_x:[null]+ offset Immediate:0*i64]
+   Store Immediate:0 to [Address: point_y:[null]+ offset Immediate:1*i64]
+   Store Immediate:0 to [Address: point_z:[null]+ offset Immediate:2*i64]
+   Return
+
+define i64 @__point__set(struct:point:, i64, i64, i64)
+   Store [a_x] to [Address: point_x:[null]+ offset Immediate:0*i64]
+   Store [a_y] to [Address: point_y:[null]+ offset Immediate:1*i64]
+   Store [a_z] to [Address: point_z:[null]+ offset Immediate:2*i64]
+   Return
+
+define i64 @__point__sqrLen(struct:point:)
    [%r0]= alloca i64
-   [%r0]=[x] add [y]
-   Store [%r0] to [x]
+   [%r0]=[Address: point_x:[null]+ offset Immediate:0*i64] imul [Address: point_x:[null]+ offset Immediate:0*i64]
+   [%r1]= alloca i64
+   [%r1]=[Address: point_y:[null]+ offset Immediate:1*i64] imul [Address: point_y:[null]+ offset Immediate:1*i64]
    [%r2]= alloca i64
-   [%r2] = Call @toString([x])
-   Call @println([%r2])
+   [%r2]=[%r0] add [%r1]
+   [%r3]= alloca i64
+   [%r3]=[Address: point_z:[null]+ offset Immediate:2*i64] imul [Address: point_z:[null]+ offset Immediate:2*i64]
+   [%r4]= alloca i64
+   [%r4]=[%r2] add [%r3]
+   Return: [%r4]
+   Return
+
+define i64 @__point__sqrDis(struct:point:, struct:point:)
+   [%r0]= alloca i64
+   [%r0]=[Address: point_x:[null]+ offset Immediate:0*i64] sub [Address: x:[other]+ offset Immediate:0*i64]
+   [%r1]= alloca i64
+   [%r1]=[Address: point_x:[null]+ offset Immediate:0*i64] sub [Address: x:[other]+ offset Immediate:0*i64]
+   [%r2]= alloca i64
+   [%r2]=[%r0] imul [%r1]
+   [%r3]= alloca i64
+   [%r3]=[Address: point_y:[null]+ offset Immediate:1*i64] sub [Address: y:[other]+ offset Immediate:1*i64]
+   [%r4]= alloca i64
+   [%r4]=[Address: point_y:[null]+ offset Immediate:1*i64] sub [Address: y:[other]+ offset Immediate:1*i64]
+   [%r5]= alloca i64
+   [%r5]=[%r3] imul [%r4]
+   [%r6]= alloca i64
+   [%r6]=[%r2] add [%r5]
+   [%r7]= alloca i64
+   [%r7]=[Address: point_z:[null]+ offset Immediate:2*i64] sub [Address: z:[other]+ offset Immediate:2*i64]
+   [%r8]= alloca i64
+   [%r8]=[Address: point_z:[null]+ offset Immediate:2*i64] sub [Address: z:[other]+ offset Immediate:2*i64]
+   [%r9]= alloca i64
+   [%r9]=[%r7] imul [%r8]
+   [%r10]= alloca i64
+   [%r10]=[%r6] add [%r9]
+   Return: [%r10]
+   Return
+
+define i64 @__point__dot(struct:point:, struct:point:)
+   [%r0]= alloca i64
+   [%r0]=[Address: point_x:[null]+ offset Immediate:0*i64] imul [Address: x:[other]+ offset Immediate:0*i64]
+   [%r1]= alloca i64
+   [%r1]=[Address: point_y:[null]+ offset Immediate:1*i64] imul [Address: y:[other]+ offset Immediate:1*i64]
+   [%r2]= alloca i64
+   [%r2]=[%r0] add [%r1]
+   [%r3]= alloca i64
+   [%r3]=[Address: point_z:[null]+ offset Immediate:2*i64] imul [Address: z:[other]+ offset Immediate:2*i64]
+   [%r4]= alloca i64
+   [%r4]=[%r2] add [%r3]
+   Return: [%r4]
+   Return
+
+define struct:point: @__point__cross(struct:point:, struct:point:)
+   [retval]= alloca struct:point:
+   [%r0]= alloca Immediate:8
+   [%r0]= Malloc Immediate:4
+   Store [%r0] to [retval]
+   [%r2]= alloca i64
+   [%r2]=[Address: point_y:[null]+ offset Immediate:1*i64] imul [Address: z:[other]+ offset Immediate:2*i64]
+   [%r3]= alloca i64
+   [%r3]=[Address: point_z:[null]+ offset Immediate:2*i64] imul [Address: y:[other]+ offset Immediate:1*i64]
+   [%r4]= alloca i64
+   [%r4]=[%r2] sub [%r3]
+   [%r5]= alloca i64
+   [%r5]=[Address: point_z:[null]+ offset Immediate:2*i64] imul [Address: x:[other]+ offset Immediate:0*i64]
+   [%r6]= alloca i64
+   [%r6]=[Address: point_x:[null]+ offset Immediate:0*i64] imul [Address: z:[other]+ offset Immediate:2*i64]
+   [%r7]= alloca i64
+   [%r7]=[%r5] sub [%r6]
+   [%r8]= alloca i64
+   [%r8]=[Address: point_x:[null]+ offset Immediate:0*i64] imul [Address: y:[other]+ offset Immediate:1*i64]
+   [%r9]= alloca i64
+   [%r9]=[Address: point_y:[null]+ offset Immediate:1*i64] imul [Address: x:[other]+ offset Immediate:0*i64]
+   [%r10]= alloca i64
+   [%r10]=[%r8] sub [%r9]
+   Call @__point__set([retval],[%r4],[%r7],[%r10])
+   Return: [retval]
+   Return
+
+define struct:point: @__point__add(struct:point:, struct:point:)
+   [%r0]= alloca i64
+   [%r0]=[Address: point_x:[null]+ offset Immediate:0*i64] add [Address: x:[other]+ offset Immediate:0*i64]
+   Store [%r0] to [Address: point_x:[null]+ offset Immediate:0*i64]
+   [%r1]= alloca i64
+   [%r1]=[Address: point_y:[null]+ offset Immediate:1*i64] add [Address: y:[other]+ offset Immediate:1*i64]
+   Store [%r1] to [Address: point_y:[null]+ offset Immediate:1*i64]
+   [%r2]= alloca i64
+   [%r2]=[Address: point_z:[null]+ offset Immediate:2*i64] add [Address: z:[other]+ offset Immediate:2*i64]
+   Store [%r2] to [Address: point_z:[null]+ offset Immediate:2*i64]
+   Return: [null]
+   Return
+
+define struct:point: @__point__sub(struct:point:, struct:point:)
+   [%r0]= alloca i64
+   [%r0]=[Address: point_x:[null]+ offset Immediate:0*i64] sub [Address: x:[other]+ offset Immediate:0*i64]
+   Store [%r0] to [Address: point_x:[null]+ offset Immediate:0*i64]
+   [%r1]= alloca i64
+   [%r1]=[Address: point_y:[null]+ offset Immediate:1*i64] sub [Address: y:[other]+ offset Immediate:1*i64]
+   Store [%r1] to [Address: point_y:[null]+ offset Immediate:1*i64]
+   [%r2]= alloca i64
+   [%r2]=[Address: point_z:[null]+ offset Immediate:2*i64] sub [Address: z:[other]+ offset Immediate:2*i64]
+   Store [%r2] to [Address: point_z:[null]+ offset Immediate:2*i64]
+   Return: [null]
+   Return
+
+define i64 @__point__printPoint(struct:point:)
+   [%r1]= alloca i64
+   [%r2]= alloca i64
+   [%r3]= alloca i64
+   [%r4]= alloca i64
+   [%r5]= alloca i64
+   [%r6]= alloca i64
+   [%r7]= alloca i64
+   [%r7] = Call @toString([Address: point_x:[null]+ offset Immediate:0*i64])
+   [%r6] = Call @StrADD([String_0],[%r7])
+   [%r5] = Call @StrADD([%r6],[String_1])
+   [%r8]= alloca i64
+   [%r8] = Call @toString([Address: point_y:[null]+ offset Immediate:1*i64])
+   [%r4] = Call @StrADD([%r5],[%r8])
+   [%r3] = Call @StrADD([%r4],[String_2])
+   [%r9]= alloca i64
+   [%r9] = Call @toString([Address: point_z:[null]+ offset Immediate:2*i64])
+   [%r2] = Call @StrADD([%r3],[%r9])
+   [%r1] = Call @StrADD([%r2],[String_3])
+   Call @println([%r1])
+   Return
+
+define i64 @main()
+   [a]= alloca struct:point:
+   [%r0]= alloca Immediate:8
+   [%r0]= Malloc Immediate:4
+   Store [%r0] to [a]
+   [b]= alloca struct:point:
+   [%r1]= alloca Immediate:8
+   [%r1]= Malloc Immediate:4
+   Store [%r1] to [b]
+   [c]= alloca struct:point:
+   [%r2]= alloca Immediate:8
+   [%r2]= Malloc Immediate:4
+   Store [%r2] to [c]
+   [d]= alloca struct:point:
+   [%r3]= alloca Immediate:8
+   [%r3]= Malloc Immediate:4
+   Store [%r3] to [d]
+   Call @__point__printPoint([a])
+   [%r6]= alloca i64
+   [%r6]=Immediate:463 neg
+   Call @__point__set([a],Immediate:849,[%r6],Immediate:480)
+   [%r8]= alloca i64
+   [%r8]=Immediate:208 neg
+   [%r9]= alloca i64
+   [%r9]=Immediate:150 neg
+   Call @__point__set([b],[%r8],Immediate:585,[%r9])
+   [%r11]= alloca i64
+   [%r11]=Immediate:670 neg
+   [%r12]= alloca i64
+   [%r12]=Immediate:742 neg
+   Call @__point__set([c],Immediate:360,[%r11],[%r12])
+   [%r14]= alloca i64
+   [%r14]=Immediate:29 neg
+   [%r15]= alloca i64
+   [%r15]=Immediate:591 neg
+   [%r16]= alloca i64
+   [%r16]=Immediate:960 neg
+   Call @__point__set([d],[%r14],[%r15],[%r16])
+   [%r17]= alloca i64
+   [%r17] = Call @__point__add([a],[b])
+   [%r18]= alloca i64
+   [%r18] = Call @__point__add([b],[c])
+   [%r19]= alloca i64
+   [%r19] = Call @__point__add([d],[c])
+   [%r20]= alloca i64
+   [%r20] = Call @__point__sub([c],[a])
+   [%r21]= alloca i64
+   [%r21] = Call @__point__sub([b],[d])
+   [%r22]= alloca i64
+   [%r22] = Call @__point__sub([d],[c])
+   [%r23]= alloca i64
+   [%r23] = Call @__point__add([c],[b])
+   [%r24]= alloca i64
+   [%r24] = Call @__point__add([a],[b])
+   [%r25]= alloca i64
+   [%r25] = Call @__point__add([b],[b])
+   [%r26]= alloca i64
+   [%r26] = Call @__point__add([c],[c])
+   [%r27]= alloca i64
+   [%r27] = Call @__point__sub([a],[d])
+   [%r28]= alloca i64
+   [%r28] = Call @__point__add([a],[b])
+   [%r29]= alloca i64
+   [%r29] = Call @__point__sub([b],[c])
+   [%r31]= alloca i64
+   [%r32]= alloca i64
+   [%r32] = Call @__point__sqrLen([a])
+   [%r31] = Call @toString([%r32])
+   Call @println([%r31])
+   [%r34]= alloca i64
+   [%r35]= alloca i64
+   [%r35] = Call @__point__sqrLen([b])
+   [%r34] = Call @toString([%r35])
+   Call @println([%r34])
+   [%r37]= alloca i64
+   [%r38]= alloca i64
+   [%r38] = Call @__point__sqrDis([b],[c])
+   [%r37] = Call @toString([%r38])
+   Call @println([%r37])
+   [%r40]= alloca i64
+   [%r41]= alloca i64
+   [%r41] = Call @__point__sqrDis([d],[a])
+   [%r40] = Call @toString([%r41])
+   Call @println([%r40])
+   [%r43]= alloca i64
+   [%r44]= alloca i64
+   [%r44] = Call @__point__dot([c],[a])
+   [%r43] = Call @toString([%r44])
+   Call @println([%r43])
+   [%r45]= alloca i64
+   [%r45] = Call @__point__cross([b],[d])
+   Call @__point__printPoint([%r45])
+   Call @__point__printPoint([a])
+   Call @__point__printPoint([b])
+   Call @__point__printPoint([c])
+   Call @__point__printPoint([d])
    Return: Immediate:0
    Return
 
 
 ***************TYPE*************
-struct:rec= type {i64 i64}
+struct:point= type {i64 i64 i64}
 
 
 ***************DATA*************
+String_0: (
+String_1: , 
+String_2: , 
+String_3: )

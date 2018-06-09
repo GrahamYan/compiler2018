@@ -63,7 +63,7 @@ public class ScopeCollector implements ASTVisitor {
     public void visit(FuncDeclNode node) {
         if(!currentScope.isTop() && !currentScope.isClass())
             error.addError(node.getLocation(),
-                    "function defination should be in top scope or in a class");
+                    "function definition should be in top scope or in a class");
         node.setExternalScope(currentScope);
         Scope scope = new Scope(currentScope);
         scope.setFunction(true);

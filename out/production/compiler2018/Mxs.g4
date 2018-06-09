@@ -33,7 +33,7 @@ defclass : 'class' classname '{'                        //define class
 
 funcname : ID;                                          //function name
 
-defunc : type funcname '(' params ')' block;            //define function
+defunc : type? funcname '(' params ')' block;            //define function
 
 params : (param (',' param)*)?;                         //list of parameters
 

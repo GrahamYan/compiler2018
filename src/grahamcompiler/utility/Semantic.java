@@ -220,9 +220,11 @@ public class Semantic implements ASTVisitor {
     @Override
     public void visit(CallExprNode node) {
         if(node == null)return;
-        if(!currentScope.containsNode(node.getFuncName()))
+        if(!currentScope.containsNode(node.getFuncName())) {
+            System.out.println("************" + node.getFuncName());
             error.addError(node.getLocation(),
                     "function " + node.getFuncName().toString() + " have not been declared");
+        }
         FuncDeclNode function = (FuncDeclNode)currentScope.findNode(node.getFuncName());
         if(!function.isFunction())
             error.addError(node.getLocation(),
@@ -282,9 +284,9 @@ public class Semantic implements ASTVisitor {
         if(node.isFunctionCall()) {
             FuncDeclNode func = (FuncDeclNode)scope.findNode(node.getName());
             node.setExprType(func.getReturnType());
-            visitMemberCall(node.getFunctionCall(), node.getExpress().getExprType().getClassNode().getInternalScope());
+            visit(node.getFunctionCall().getParameter());
             checkParameterMatch(func, node.getFunctionCall());
-            visit(node.getFunctionCall());
+            visitMemberCall(node.getFunctionCall(), node.getExpress().getExprType().getClassNode().getInternalScope());
             node.getFunctionCall().setFunction(func);
         }
         else {

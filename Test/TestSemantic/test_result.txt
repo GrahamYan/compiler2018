@@ -1,36 +1,259 @@
 ProgNode
-  *VariableDeclaration: a
-    ArrayType: int
-  *VariableDeclaration: i
-    BuiltInType: int
-  *VariableDeclaration: j
-    BuiltInType: int
-  *ClassDeclaration: rec
-    *VariableDeclaration: num
+  *ClassDeclaration: point
+    *FunctionDeclaration: point
+      Type: point
+      BlockNode
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: x
+            IntConstNode  value = 0
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: y
+            IntConstNode  value = 0
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: z
+            IntConstNode  value = 0
+    *FunctionDeclaration: set
+      BuiltInType: void
+      FuncParamNode Type: int    Name: a_x
+      FuncParamNode Type: int    Name: a_y
+      FuncParamNode Type: int    Name: a_z
+      BlockNode
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: x
+            IdentifierExprNode  ID name: a_x
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: y
+            IdentifierExprNode  ID name: a_y
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: z
+            IdentifierExprNode  ID name: a_z
+    *FunctionDeclaration: sqrLen
       BuiltInType: int
-    *VariableDeclaration: c
+      BlockNode
+        ReturnNodeExpr:BinaryExprNode
+    *FunctionDeclaration: sqrDis
       BuiltInType: int
-  *VariableDeclaration: b
-    ArrayType: rec
+      FuncParamNode Type: point    Name: other
+      BlockNode
+        ReturnNodeExpr:BinaryExprNode
+    *FunctionDeclaration: dot
+      BuiltInType: int
+      FuncParamNode Type: point    Name: other
+      BlockNode
+        ReturnNodeExpr:BinaryExprNode
+    *FunctionDeclaration: cross
+      ClassType: point
+      FuncParamNode Type: point    Name: other
+      BlockNode
+        *VariableDeclaration: retval
+          ClassType: point
+        ExprStmtNode
+          MemberExprNode
+            IdentifierExprNode  ID name: retval
+        ReturnNodeExpr:IdentifierExprNode
+    *FunctionDeclaration: add
+      ClassType: point
+      FuncParamNode Type: point    Name: other
+      BlockNode
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: x
+            BinaryExprNode  Op: ADD
+              IdentifierExprNode  ID name: x
+              MemberExprNode
+                IdentifierExprNode  ID name: other
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: y
+            BinaryExprNode  Op: ADD
+              IdentifierExprNode  ID name: y
+              MemberExprNode
+                IdentifierExprNode  ID name: other
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: z
+            BinaryExprNode  Op: ADD
+              IdentifierExprNode  ID name: z
+              MemberExprNode
+                IdentifierExprNode  ID name: other
+        ReturnNodeExpr:ThisExprNode
+    *FunctionDeclaration: sub
+      ClassType: point
+      FuncParamNode Type: point    Name: other
+      BlockNode
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: x
+            BinaryExprNode  Op: MIN
+              IdentifierExprNode  ID name: x
+              MemberExprNode
+                IdentifierExprNode  ID name: other
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: y
+            BinaryExprNode  Op: MIN
+              IdentifierExprNode  ID name: y
+              MemberExprNode
+                IdentifierExprNode  ID name: other
+        ExprStmtNode
+          AssignExprNode
+            IdentifierExprNode  ID name: z
+            BinaryExprNode  Op: MIN
+              IdentifierExprNode  ID name: z
+              MemberExprNode
+                IdentifierExprNode  ID name: other
+        ReturnNodeExpr:ThisExprNode
+    *FunctionDeclaration: printPoint
+      BuiltInType: void
+      BlockNode
+        ExprStmtNode
+          CallExprNode  Function Name: println
+            ExprListNode
+              BinaryExprNode  Op: ADD
+                BinaryExprNode  Op: ADD
+                  BinaryExprNode  Op: ADD
+                    BinaryExprNode  Op: ADD
+                      BinaryExprNode  Op: ADD
+                        BinaryExprNode  Op: ADD
+                          StringConstNode  value = (
+                          CallExprNode  Function Name: toString
+                            ExprListNode
+                              IdentifierExprNode  ID name: x
+                        StringConstNode  value = , 
+                      CallExprNode  Function Name: toString
+                        ExprListNode
+                          IdentifierExprNode  ID name: y
+                    StringConstNode  value = , 
+                  CallExprNode  Function Name: toString
+                    ExprListNode
+                      IdentifierExprNode  ID name: z
+                StringConstNode  value = )
+    *VariableDeclaration: x
+      BuiltInType: int
+    *VariableDeclaration: y
+      BuiltInType: int
+    *VariableDeclaration: z
+      BuiltInType: int
   *FunctionDeclaration: main
     BuiltInType: int
     BlockNode
-      *VariableDeclaration: x
-        BuiltInType: int
-        IntConstNode  value = 0
-      *VariableDeclaration: y
-        BuiltInType: int
-        IntConstNode  value = 1
+      *VariableDeclaration: a
+        ClassType: point
+      *VariableDeclaration: b
+        ClassType: point
+      *VariableDeclaration: c
+        ClassType: point
+      *VariableDeclaration: d
+        ClassType: point
       ExprStmtNode
-        AssignExprNode
-          IdentifierExprNode  ID name: x
-          BinaryExprNode  Op: ADD
-            IdentifierExprNode  ID name: x
-            IdentifierExprNode  ID name: y
+        MemberExprNode
+          IdentifierExprNode  ID name: a
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: a
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: b
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: c
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: d
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: a
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: b
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: d
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: c
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: b
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: d
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: c
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: a
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: b
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: c
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: a
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: a
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: b
       ExprStmtNode
         CallExprNode  Function Name: println
           ExprListNode
             CallExprNode  Function Name: toString
               ExprListNode
-                IdentifierExprNode  ID name: x
+                MemberExprNode
+                  IdentifierExprNode  ID name: a
+      ExprStmtNode
+        CallExprNode  Function Name: println
+          ExprListNode
+            CallExprNode  Function Name: toString
+              ExprListNode
+                MemberExprNode
+                  IdentifierExprNode  ID name: b
+      ExprStmtNode
+        CallExprNode  Function Name: println
+          ExprListNode
+            CallExprNode  Function Name: toString
+              ExprListNode
+                MemberExprNode
+                  IdentifierExprNode  ID name: b
+      ExprStmtNode
+        CallExprNode  Function Name: println
+          ExprListNode
+            CallExprNode  Function Name: toString
+              ExprListNode
+                MemberExprNode
+                  IdentifierExprNode  ID name: d
+      ExprStmtNode
+        CallExprNode  Function Name: println
+          ExprListNode
+            CallExprNode  Function Name: toString
+              ExprListNode
+                MemberExprNode
+                  IdentifierExprNode  ID name: c
+      ExprStmtNode
+        MemberExprNode
+          MemberExprNode
+            IdentifierExprNode  ID name: b
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: a
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: b
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: c
+      ExprStmtNode
+        MemberExprNode
+          IdentifierExprNode  ID name: d
       ReturnNodeExpr:IntConstNode
