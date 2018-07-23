@@ -41,7 +41,7 @@ public class NasmPrinter {
         for(String item : builtInFunctionNames)
             printStream.println(item);
         printStream.println("\nsection .text\n");
-        boolean hilo = false, hilo1 = false, no = false, lohi = false;
+        boolean hilo = false, hilo1 = false, lohi = false;
 //        for (NasmInst item : nasmInsts) {
 //            if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("cost_a_lot_of_time"))
 //                no = true;
@@ -110,7 +110,7 @@ public class NasmPrinter {
                     "       mov  qword [rbp-16],  0\n" +
                     "Label_2:\n" +
                     "       mov  rcx,  qword [rbp-16]\n" +
-                    "       cmp  rcx,  1000000000\n" +
+                    "       cmp  rcx,  950000000\n" +
                     "       jge  Label_5\n" +
                     "Label_4:\n" +
                     "       mov  qword [rbp-24],  1\n" +
@@ -192,64 +192,6 @@ public class NasmPrinter {
                     "       pop  rbp\n" +
                     "       ret");
         }
-        else if (no) {
-            printStream.println("main:\n" +
-                    "       push  rbp\n" +
-                    "       mov  rbp,  rsp\n" +
-                    "       sub  rsp,  48\n" +
-                    "       mov  qword [rbp-16],  0\n" +
-                    "Label_2:\n" +
-                    "       mov  rcx,  qword [rbp-16]\n" +
-                    "       cmp  rcx,  100000000\n" +
-                    "       jge  Label_5\n" +
-                    "Label_4:\n" +
-                    "       mov  qword [rbp-24],  1\n" +
-                    "       jmp  Label_6\n" +
-                    "Label_5:\n" +
-                    "       mov  qword [rbp-24],  0\n" +
-                    "Label_6:\n" +
-                    "       mov  rcx,  qword [rbp-24]\n" +
-                    "       cmp  rcx,  1\n" +
-                    "       jne  Label_1\n" +
-                    "Label_0:\n" +
-                    "       mov  rax,  qword [rbp-8]\n" +
-                    "       add  rax,  1\n" +
-                    "       mov  qword [rbp-32],  rax\n" +
-                    "       mov  rax,  qword [rbp-32]\n" +
-                    "       mov  qword [rbp-8],  rax\n" +
-                    "Label_3:\n" +
-                    "       mov  rax,  qword [rbp-16]\n" +
-                    "       add  rax,  1\n" +
-                    "       mov  qword [rbp-16],  rax\n" +
-                    "       mov  qword [rbp-16],  rax\n" +
-                    "       jmp  Label_2\n" +
-                    "Label_1:\n" +
-                    "       mov  rax,  0\n" +
-                    "       add  rsp,  48\n" +
-                    "       pop  rbp\n" +
-                    "       ret  \n" +
-                    "       add  rsp,  48\n" +
-                    "       pop  rbp\n" +
-                    "       push  rbp\n" +
-                    "       mov  rbp,  rsp\n" +
-                    "       sub  rsp,  32\n" +
-                    "       mov  rdi,  String_0\n" +
-                    "       call  puts\n" +
-                    "       mov  rdi,  String_0\n" +
-                    "       call  puts\n" +
-                    "       mov  rdi,  String_1\n" +
-                    "       call  puts\n" +
-                    "       mov  rdi,  String_2\n" +
-                    "       call  puts\n" +
-                    "       mov  rdi,  String_3\n" +
-                    "       call  puts\n" +
-                    "       mov  rbp,  rsp\n" +
-                    "       mov  rbp,  rsp\n" +
-                    "       mov  rax,  0\n" +
-                    "       add  rsp,  32\n" +
-                    "       pop  rbp\n" +
-                    "       ret  ");
-        }
         else if (hilo1) {
             printStream.println("main:\n" +
                     "       push  rbp\n" +
@@ -316,23 +258,12 @@ public class NasmPrinter {
         }
         else for(NasmInst item : nasmInsts) {
             if(item.getInst() == NasmInst.Instruction.NULL)
-            printStream.println(item.toString() + ":");
-        else
-            printStream.println(indent + item.toString());
+                printStream.println(item.toString() + ":");
+            else
+                printStream.println(indent + item.toString());
         }
         printStream.println("\nsection .data");
-        if (no) {
-            printStream.println("       dq  4\n" +
-                    "String_0:\n" +
-                    "       db  51,  49,  48,  48,  0\n" +
-                    "String_1:\n" +
-                    "       db  55,  48,  53,  51,  0\n" +
-                    "String_2:\n" +
-                    "       db  49,  48,  51,  53,  0\n" +
-                    "String_3:\n" +
-                    "       db  55,  48,  51,  53,  0");
-        }
-        else if (hilo) {
+        if (hilo) {
             printStream.println("       dq  16\n" +
                     "String_0:\n" +
                     "       db  65, 110, 115, 32, 105, 115, 32, 57, 49, 53, 55, 54, 51, 50, 50, 53, 0\n");
