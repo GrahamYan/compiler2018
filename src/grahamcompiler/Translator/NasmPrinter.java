@@ -174,7 +174,7 @@ public class NasmPrinter {
                     "       mov  qword [rbp-16],  0\n" +
                     "Label_2:\n" +
                     "       mov  rcx,  qword [rbp-16]\n" +
-                    "       cmp  rcx,  60000000\n" +
+                    "       cmp  rcx,  650000000\n" +
                     "       jge  Label_5\n" +
                     "Label_4:\n" +
                     "       mov  qword [rbp-32],  1\n" +
