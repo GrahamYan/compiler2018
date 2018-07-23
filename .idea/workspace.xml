@@ -29,8 +29,8 @@
       <file leaf-file-name="NasmPrinter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="444" column="34" lean-forward="true" selection-start-line="444" selection-start-column="34" selection-end-line="444" selection-end-column="34" />
+            <state relative-caret-position="210">
+              <caret line="442" column="41" selection-start-line="442" selection-start-column="41" selection-end-line="442" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -785,8 +785,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="444" column="34" lean-forward="true" selection-start-line="444" selection-start-column="34" selection-end-line="444" selection-end-column="34" />
+        <state relative-caret-position="210">
+          <caret line="442" column="41" selection-start-line="442" selection-start-column="41" selection-end-line="442" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
