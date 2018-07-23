@@ -3,13 +3,13 @@ int main()
     int x = 0;
     int i;
     int j;
-    for (i = 0; i < 2000000000; ++i) {
+    for (i = 0; i < 150000000; ++i) {
         for (j = 0; j < 2; ++j) {
             if (j == 0) x = x + 1;
             if (j == 1) x = x - 1;
         }
     }
-    println("D008B9F5 A2899DA6 BEEF7FEA EF74C135");
+    println("Ans is 915763225");
 
     return 0;
 }

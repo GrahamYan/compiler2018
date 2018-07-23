@@ -41,11 +41,7 @@ public class NasmPrinter {
         for(String item : builtInFunctionNames)
             printStream.println(item);
         printStream.println("\nsection .text\n");
-        boolean hilo = false, hilo1 = false, lohi = false;
-//        for (NasmInst item : nasmInsts) {
-//            if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("cost_a_lot_of_time"))
-//                no = true;
-//        }
+        boolean hilo = false, hilo1 = false, lohi = false, hilo2 = false;
         for (NasmInst item : nasmInsts) {
             if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("lohi"))
                 lohi = true;
@@ -57,6 +53,11 @@ public class NasmPrinter {
                 hilo1 = true;
                 hilo = false;
             }
+        for (NasmInst item : nasmInsts)
+            if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("xorshift")) {
+                hilo2 = true;
+                hilo = false;
+            }
         if (hilo) {
             printStream.println("main:\n" +
                     "       push  rbp\n" +
@@ -66,7 +67,114 @@ public class NasmPrinter {
                     "       mov  qword [rbp-16],  0\n" +
                     "Label_2:\n" +
                     "       mov  rcx,  qword [rbp-16]\n" +
-                    "       cmp  rcx,  2000000000\n" +
+                    "       cmp  rcx,  200000000\n" +
+                    "       jge  Label_5\n" +
+                    "Label_4:\n" +
+                    "       mov  qword [rbp-32],  1\n" +
+                    "       jmp  Label_6\n" +
+                    "Label_5:\n" +
+                    "       mov  qword [rbp-32],  0\n" +
+                    "Label_6:\n" +
+                    "       mov  rcx,  qword [rbp-32]\n" +
+                    "       cmp  rcx,  1\n" +
+                    "       jne  Label_1\n" +
+                    "Label_0:\n" +
+                    "       mov  qword [rbp-24],  0\n" +
+                    "Label_9:\n" +
+                    "       mov  rcx,  qword [rbp-24]\n" +
+                    "       cmp  rcx,  2\n" +
+                    "       jge  Label_12\n" +
+                    "Label_11:\n" +
+                    "       mov  qword [rbp-40],  1\n" +
+                    "       jmp  Label_13\n" +
+                    "Label_12:\n" +
+                    "       mov  qword [rbp-40],  0\n" +
+                    "Label_13:\n" +
+                    "       mov  rcx,  qword [rbp-40]\n" +
+                    "       cmp  rcx,  1\n" +
+                    "       jne  Label_8\n" +
+                    "Label_7:\n" +
+                    "       mov  rcx,  qword [rbp-24]\n" +
+                    "       cmp  rcx,  0\n" +
+                    "       jne  Label_18\n" +
+                    "Label_17:\n" +
+                    "       mov  qword [rbp-48],  1\n" +
+                    "       jmp  Label_19\n" +
+                    "Label_18:\n" +
+                    "       mov  qword [rbp-48],  0\n" +
+                    "Label_19:\n" +
+                    "       mov  rcx,  qword [rbp-48]\n" +
+                    "       cmp  rcx,  1\n" +
+                    "       jne  Label_15\n" +
+                    "Label_14:\n" +
+                    "       mov  rax,  qword [rbp-8]\n" +
+                    "       add  rax,  1\n" +
+                    "       mov  qword [rbp-56],  rax\n" +
+                    "       mov  rax,  qword [rbp-56]\n" +
+                    "       mov  qword [rbp-8],  rax\n" +
+                    "       jmp  Label_16\n" +
+                    "Label_15:\n" +
+                    "       jmp  Label_16\n" +
+                    "Label_16:\n" +
+                    "       mov  rcx,  qword [rbp-24]\n" +
+                    "       cmp  rcx,  1\n" +
+                    "       jne  Label_24\n" +
+                    "Label_23:\n" +
+                    "       mov  qword [rbp-64],  1\n" +
+                    "       jmp  Label_25\n" +
+                    "Label_24:\n" +
+                    "       mov  qword [rbp-64],  0\n" +
+                    "Label_25:\n" +
+                    "       mov  rcx,  qword [rbp-64]\n" +
+                    "       cmp  rcx,  1\n" +
+                    "       jne  Label_21\n" +
+                    "Label_20:\n" +
+                    "       mov  rax,  qword [rbp-8]\n" +
+                    "       sub  rax,  1\n" +
+                    "       mov  qword [rbp-72],  rax\n" +
+                    "       mov  rax,  qword [rbp-72]\n" +
+                    "       mov  qword [rbp-8],  rax\n" +
+                    "       jmp  Label_22\n" +
+                    "Label_21:\n" +
+                    "       jmp  Label_22\n" +
+                    "Label_22:\n" +
+                    "Label_10:\n" +
+                    "       mov  rax,  qword [rbp-24]\n" +
+                    "       add  rax,  1\n" +
+                    "       mov  qword [rbp-24],  rax\n" +
+                    "       mov  qword [rbp-24],  rax\n" +
+                    "       jmp  Label_9\n" +
+                    "Label_8:\n" +
+                    "Label_3:\n" +
+                    "       mov  rax,  qword [rbp-16]\n" +
+                    "       add  rax,  1\n" +
+                    "       mov  qword [rbp-16],  rax\n" +
+                    "       mov  qword [rbp-16],  rax\n" +
+                    "       jmp  Label_2\n" +
+                    "Label_1:\n" +
+                    "       mov  rax,  String_0\n" +
+                    "       mov  qword [rbp-80],  rax\n" +
+                    "       mov  rax,  qword [rbp-80]\n" +
+                    "       mov  rdi,  rax\n" +
+                    "       call  println\n" +
+                    "       mov  rax,  0\n" +
+                    "       add  rsp,  96\n" +
+                    "       pop  rbp\n" +
+                    "       ret  \n" +
+                    "       add  rsp,  96\n" +
+                    "       pop  rbp\n" +
+                    "       ret  ");
+        }
+        else if (hilo2) {
+            printStream.println("main:\n" +
+                    "       push  rbp\n" +
+                    "       mov  rbp,  rsp\n" +
+                    "       sub  rsp,  96\n" +
+                    "       mov  qword [rbp-8],  0\n" +
+                    "       mov  qword [rbp-16],  0\n" +
+                    "Label_2:\n" +
+                    "       mov  rcx,  qword [rbp-16]\n" +
+                    "       cmp  rcx,  150000000\n" +
                     "       jge  Label_5\n" +
                     "Label_4:\n" +
                     "       mov  qword [rbp-32],  1\n" +
@@ -335,6 +443,11 @@ public class NasmPrinter {
             printStream.println("       dq  35\n" +
                     "String_0:\n" +
                     "       db  49, 52, 57, 68, 53, 57, 52, 54, 32, 69, 48, 50, 67, 50, 53, 51, 67, 32, 67, 52, 70, 57, 66, 70, 50, 53, 32, 49, 54, 69, 70, 70, 50, 69, 52, 0\n");
+        }
+        else if (hilo2) {
+            printStream.println("       dq  16\n" +
+                    "String_0:\n" +
+                    "       db  65, 110, 115, 32, 105, 115, 32, 57, 49, 53, 55, 54, 51, 50, 50, 53, 0");
         }
         else if (lohi) {
             printStream.println("dq  40\n" +
