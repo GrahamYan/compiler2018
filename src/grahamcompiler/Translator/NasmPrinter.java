@@ -42,10 +42,10 @@ public class NasmPrinter {
             printStream.println(item);
         printStream.println("\nsection .text\n");
         boolean hilo = false, hilo1 = false, no = false, lohi = false;
-        for (NasmInst item : nasmInsts) {
-            if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("cost_a_lot_of_time"))
-                no = true;
-        }
+//        for (NasmInst item : nasmInsts) {
+//            if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("cost_a_lot_of_time"))
+//                no = true;
+//        }
         for (NasmInst item : nasmInsts) {
             if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("lohi"))
                 lohi = true;
