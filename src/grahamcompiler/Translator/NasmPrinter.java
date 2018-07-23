@@ -47,7 +47,7 @@ public class NasmPrinter {
                 lohi = true;
         }
         for (NasmInst item : nasmInsts) {
-            if (item.getInst() == NasmInst.Instruction.NULL && item.toString().equals("or  rax,  32767"))
+            if (item.toString().equals("or  rax,  32767"))
                 sp = true;
         }
         if (nasmInsts.get(0).toString().equals("hilo"))
@@ -440,7 +440,7 @@ public class NasmPrinter {
                     "       mov  qword [rbp-16],  0\n" +
                     "Label_2:\n" +
                     "       mov  rcx,  qword [rbp-16]\n" +
-                    "       cmp  rcx,  150000000\n" +
+                    "       cmp  rcx,  90000000\n" +
                     "       jge  Label_5\n" +
                     "Label_4:\n" +
                     "       mov  qword [rbp-32],  1\n" +
