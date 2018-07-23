@@ -152,7 +152,6 @@ public class IRGenerator implements IRTraversal {
             curIRScope.addAddress(item.getName(), address);
         }
         Name name = FunctionRename(node.getName());
-//        visitFormalParameter(node.getParameter());
         Function function = new Function(curLab, name, type, params, 0);
         addInst(function);
         curFunc = function;
@@ -307,7 +306,6 @@ public class IRGenerator implements IRTraversal {
     @Override
     public Immediate visit(IntConstNode node) {
         if(node == null) return null;
-//        addInst(new Load(currentLabel, currentFunction.getRegister(), new Immediate(node.getValue())));
         return new Immediate(node.getInteger());
     }
 

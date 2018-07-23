@@ -1,9 +1,20 @@
 int main()
 {
-    int x;
+    int x = 0;
     int i;
-    for (i = 0; i < 100000000; ++i) {
+    for (i = 0; i < 2000000000; ++i) {
         x = x + 1;
     }
+    println("ABC64A57029F21F165A96BDB59F0351C7C7D1769");
+    println("5B38674EB4BD02CEC1D41C8DE3CC14A9872A2656");
+    println("082178164865B8E6425C5955DEB97DDC21DEC6DC");
+    println("E77812CE4574964BC144E3DB97953235B5A149DA");
+    println("BD1B591F0B3E8FCC2035F9FB2043FAB18E0DBDDA");
+    println("04E8696E6424C21D717E46008780505D598EB59A");
+    println("ACM");
+    println("2017");
+    println("233");
+    println("666");
+
     return 0;
 }
