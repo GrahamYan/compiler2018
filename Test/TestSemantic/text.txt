@@ -9,7 +9,7 @@ int main()
             if (j == 1) x = x - 1;
         }
     }
-    println("Ans is 915763225");
+    println("224090128");
 
     return 0;
 }
