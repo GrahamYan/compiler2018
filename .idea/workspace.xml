@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac76a849-0fa2-4bd0-b230-4725aaed2cf0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/TestSemantic/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Test/TestSemantic/text.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -28,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NasmPrinter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NasmPrinter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="556" column="41" selection-start-line="556" selection-start-column="41" selection-end-line="556" selection-end-column="41" />
+            <state relative-caret-position="100">
+              <caret line="556" column="41" lean-forward="true" selection-start-line="556" selection-start-column="41" selection-end-line="556" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/grahamcompiler/Optimizer/Allocator.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/Optimizer/livenessAnalysis.java" />
         <option value="$PROJECT_DIR$/src/grahamcompiler/IR/IRBase/IRGenerator.java" />
-        <option value="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java" />
       </list>
     </option>
   </component>
@@ -775,20 +773,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="556" column="41" selection-start-line="556" selection-start-column="41" selection-end-line="556" selection-end-column="41" />
+        <state relative-caret-position="261">
+          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/grahamcompiler/Translator/NasmPrinter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="94" column="19" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+        <state relative-caret-position="100">
+          <caret line="556" column="41" lean-forward="true" selection-start-line="556" selection-start-column="41" selection-end-line="556" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
